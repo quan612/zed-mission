@@ -1,0 +1,80 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    //   "lib": [
+    //     "dom",
+    //     "dom.iterable",
+    //     "esnext"
+    //   ],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": false,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "incremental": true,
+    "baseUrl": ".",
+    "paths": {
+      "@components/*": [
+        "components/*"
+      ],
+      "@styles/*": [
+        "styles/*"
+      ],
+      "@utils/*": [
+        "utils/*"
+      ],
+      "@repository/*": [
+        "repository/*"
+      ],
+      "@context/*": [
+        "context/*"
+      ],
+      "@shared/*": [
+        "shared/*"
+      ],
+      "@middlewares/*": [
+        "middlewares/*"
+      ],
+      "@hooks/*": [
+        "hooks/*"
+      ],
+      "@sass/*": [
+        "sass/*"
+      ],
+      "@enums/*": [
+        "enums/*"
+      ],
+      "@pages/*": [
+        "pages/*"
+      ],
+      "@theme/*": [
+        "theme/*"
+      ]
+    }
+  },
+  "include": [
+    "next-env.d.ts",
+    "**/*",
+    "**/*.tsx"
+  ],
+  "exclude": [
+    "node_modules"
+  ],
+  "ts-node": {
+        "compilerOptions": {
+          "module": "commonjs"
+       }
+}
+ 
+}
