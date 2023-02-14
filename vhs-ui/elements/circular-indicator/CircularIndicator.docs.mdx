@@ -1,0 +1,38 @@
+---
+description: A Circular Indicator component.
+---
+import { CircularIndicator, CircularIndicatorLabel } from './'
+
+
+A component that does something special and renders text in a div.
+
+
+
+### Component usage
+
+```js
+<CircularIndicator
+      data={[
+        { value: 50, color: 'blue' },
+        { value: 50, color: 'red' },
+      ]}
+      size="64px"
+      thickness={10}
+    ></CircularIndicator>
+```
+
+### Render hello world!
+
+
+```js live
+<CircularIndicator
+      data={[
+        { value: 25, color: 'cyan' },
+        { value: 75, color: 'orange' },
+      ]}
+      size="64px"
+      thickness={10}
+    >
+      <CircularIndicatorLabel style={{ color: 'black' }}>25</CircularIndicatorLabel>
+    </CircularIndicator>
+```

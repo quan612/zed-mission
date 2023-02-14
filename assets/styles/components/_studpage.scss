@@ -1,0 +1,176 @@
+.page-content.stud {
+  main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    background: #1d2026;
+
+    .main-section {
+      position: relative;
+      padding-top: 6.4rem;
+
+      @include tablet {
+        padding-top: 2.9rem;
+      }
+
+      .heading {
+        .heading-text {
+          color: #f0f8ff;
+          font-size: 3.2rem;
+          letter-spacing: 0.1px;
+          line-height: 3.2rem;
+          margin-bottom: 1rem;
+        }
+        .heading-text-sub {
+          max-width: 63rem;
+          margin-bottom: 3.2rem;
+
+          p {
+            color: #f0f8ff;
+            font-size: 1.8rem;
+            line-height: 2.4rem;
+            font-weight: 500;
+          }
+        }
+      }
+
+      .stud-content {
+        width: 108rem;
+        margin: 0 auto;
+
+        @include tablet {
+          width: 100%;
+          padding: 0 20px;
+        }
+
+        .add-horse-card {
+          @include mobile-lg {
+            margin-bottom: 2.5rem;
+          }
+        }
+
+        // stud horse header
+        .accordion-label {
+          display: flex;
+          justify-content: space-between;
+          margin-bottom: 1.6rem;
+          padding-right: 1.5rem;
+          &.hide {
+            display: none;
+          }
+          @include tablet {
+            display: none;
+          }
+
+          .right {
+            width: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+
+            .primary-caption {
+              text-align: left;
+
+              &.stable {
+                width: 45%;
+              }
+              &.key {
+                width: 25%;
+              }
+              &.date {
+                width: 22%;
+                text-align: right;
+              }
+            }
+          }
+          .normal-text {
+            font-size: 1.4rem;
+          }
+          .md-text {
+            font-size: 2.2rem;
+          }
+        }
+      }
+
+      .stud-content--empty {
+        width: 85%;
+        display: flex;
+        justify-content: center;
+        margin: unset;
+
+        @include tablet {
+          width: 100%;
+        }
+
+        .stud-state {
+          width: 51.7rem;
+          margin: 0 auto;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-wrap: wrap;
+          flex-direction: column;
+          text-align: center;
+
+          @include tablet {
+            width: 100%;
+            .d-flex {
+              flex-wrap: wrap;
+              justify-content: center;
+            }
+          }
+
+          @include tablet-sm {
+            .d-flex {
+              flex-direction: column;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.tooltip-breed-modal .rc-tooltip-arrow {
+  margin-top: -13px;
+}
+
+.tooltip-breed-modal .rc-tooltip-content {
+  margin-top: -15px;
+}
+
+.maintenance {
+  section {
+    width: 100%;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .caption {
+      width: 100%;
+      color: #f0f8ff;
+      font-size: 2.4rem;
+      font-weight: 500;
+      letter-spacing: 0.1px;
+      line-height: 2.9rem;
+      text-align: center;
+      margin: 0 0 2.4rem 0;
+    }
+
+    .text {
+      color: rgba(240, 248, 255, 0.64);
+      font-size: 1.6rem;
+      font-weight: 500;
+      line-height: 2.6rem;
+      margin: 0 0 3.4rem 0;
+    }
+
+    .primary-btn {
+      color: white;
+      text-decoration: none;
+    }
+  }
+}

@@ -1,0 +1,120 @@
+.page-content.wrong-network {
+  main {
+    flex: 1;
+    width: 56%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    padding: 6rem 0;
+    border-bottom: 1px solid rgba(240, 248, 255, 0.12);
+
+    .left {
+      width: 45%;
+
+      .oops {
+        display: block;
+        color: #27b18a;
+        font-family: Montserrat;
+        font-weight: 600;
+        -webkit-background-clip: text;
+        font-size: 1.8rem;
+        font-weight: 600;
+        letter-spacing: 1px;
+        line-height: 2.4rem;
+        margin-bottom: 1.2rem;
+      }
+
+      .lg-text {
+        margin-bottom: 3.2rem;
+      }
+
+      .primary-text {
+        span {
+          color: white;
+          font-weight: bold;
+        }
+      }
+    }
+
+    .right {
+      width: 45%;
+      border-radius: 8px;
+      background-color: rgba(240, 248, 255, 0.04);
+      padding: 5rem 8rem;
+
+      .video-content {
+        max-width: 360px;
+
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  &.mobile {
+    position: relative;
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: -26rem;
+      bottom: -47rem;
+      background: url('../images/img-new-moon.png') no-repeat;
+      background-size: 100% 100%;
+      width: 90rem;
+      height: 100vh;
+      z-index: -1;
+    }
+    main {
+      width: 100%;
+      padding: 1.6rem;
+      .right {
+        display: none;
+      }
+      .left {
+        flex: 1;
+        margin-top: 4rem;
+        .lg-text {
+          font-family: Montserrat;
+          font-weight: 700;
+          font-size: 2.8rem;
+          letter-spacing: 0;
+          line-height: 3.2rem;
+        }
+        .primary-text {
+          span {
+            display: block;
+            background-color: white;
+            font-weight: bold;
+            color: #22262d;
+            font-family: Montserrat;
+            font-weight: 700;
+            font-size: 16px;
+            font-weight: bold;
+            letter-spacing: 0.33px;
+            line-height: 24px;
+            padding: 1rem 1rem 1rem 4.4rem;
+            border-radius: 2px;
+            margin-top: 2.4rem;
+            position: relative;
+            &:before {
+              content: '';
+              position: absolute;
+              left: 1.6rem;
+              top: 1.4rem;
+              height: 1.6rem;
+              width: 1.6rem;
+              background-color: #29b6af;
+              border-radius: 50%;
+            }
+            &.ropsten:before {
+              background-color: #ff35a2;
+            }
+          }
+        }
+      }
+    }
+  }
+}

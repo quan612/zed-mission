@@ -1,0 +1,138 @@
+.accordion {
+  width: 100%;
+}
+
+.panel {
+  &__label {
+    position: relative;
+    display: block;
+    width: 100%;
+    background: none;
+    border: none;
+    text-align: left;
+    padding: 2.5rem 3rem 2.5rem 0;
+    transition: color 0.2s linear;
+    cursor: pointer;
+    will-change: height;
+    contain: content;
+
+    color: #b9bbbe;
+    font-family: Montserrat;
+    font-weight: 700;
+    font-size: 1.7rem;
+    letter-spacing: 0.21px;
+    line-height: 18px;
+    border-bottom: 1px solid #3d3e40;
+
+    &:hover {
+      color: white;
+      background-image: linear-gradient(to right, #1b2025, #272c31, #1b2025);
+    }
+
+    &:focus {
+      outline: none;
+    }
+    &:after,
+    &:before {
+      content: '';
+      position: absolute;
+      right: 1rem;
+      top: 50%;
+      width: 1.9rem;
+      height: 2px;
+      background-color: #3d3e40;
+    }
+
+    &:before {
+      transform: rotate(-90deg);
+      transition: transform 0.35s cubic-bezier(0.65, 0.05, 0.36, 1);
+    }
+  }
+
+  &.closed {
+    .panel__label {
+      @extend .slideOpen;
+    }
+
+    .panel__inner {
+      @extend .slideClosed;
+    }
+  }
+
+  &.open {
+    background: none !important;
+    .panel__label {
+      color: white;
+      border: none;
+      @extend .slideClosed;
+      &:before {
+        transform: rotate(0deg);
+      }
+    }
+
+    .panel__inner {
+      @extend .slideOpen;
+    }
+  }
+
+  &__inner {
+    will-change: height;
+    max-height: 0;
+    overflow: hidden;
+  }
+
+  &__content {
+    contain: content;
+    padding: 25px 30px 25px 0;
+    margin: 0;
+    border-bottom: 1px solid #3d3e40;
+  }
+
+  .slideClosed {
+    -webkit-animation-play-state: running;
+    -moz-animation-play-state: running;
+    -o-animation-play-state: running;
+    animation-play-state: running;
+
+    -webkit-animation: slideUp 0.32s cubic-bezier(0.65, 0.05, 0.36, 1) 0ms 1 normal forwards; /* Chrome 4.3 | Edge | Safari 4.0 - 8.0 */
+    -moz-animation: slideUp 0.32s cubic-bezier(0.65, 0.05, 0.36, 1) 0ms 1 normal forwards; /* Firefox 5.0 | Gecko 16.0 */
+    -o-animation: slideUp 0.32s cubic-bezier(0.65, 0.05, 0.36, 1) 0ms 1 normal forwards; /* Opera 12 */
+    animation: slideUp 0.32s cubic-bezier(0.65, 0.05, 0.36, 1) 0s 1 normal forwards; /* Modern browsers */
+  }
+
+  .slideOpen {
+    -webkit-animation-play-state: running;
+    -moz-animation-play-state: running;
+    -o-animation-play-state: running;
+    animation-play-state: running;
+
+    -webkit-animation: slideDown 0.32s cubic-bezier(0.65, 0.05, 0.36, 1) 0ms 1 normal forwards; /* Chrome 4.3 | Edge | Safari 4.0 - 8.0 */
+    -moz-animation: slideDown 0.32s cubic-bezier(0.65, 0.05, 0.36, 1) 0ms 1 normal forwards; /* Firefox 5.0 | Gecko 16.0 */
+    -o-animation: slideDown 0.32s cubic-bezier(0.65, 0.05, 0.36, 1) 0ms 1 normal forwards; /* Opera 12 */
+    animation: slideDown 0.32s cubic-bezier(0.65, 0.05, 0.36, 1) 0s 1 normal forwards; /* Modern browsers */
+  }
+}
+
+@keyframes slideDown {
+  from {
+    max-height: 0;
+    opacity: 0;
+  }
+
+  to {
+    max-height: 3000px;
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    max-height: 10rem;
+    opacity: 1;
+  }
+
+  to {
+    max-height: 0;
+    opacity: 0;
+  }
+}

@@ -1,0 +1,208 @@
+.lockup-modal, .withdraw-token-modal {
+  width: 40%;
+  max-width: 52rem;
+  overflow-y: auto;
+
+  @include laptop-lg {
+    width: 60%;
+    max-width: 60rem;
+  }
+
+  @include tablet-landscape {
+    width: 80%;
+    max-width: 70rem;
+    font-size: 1.4rem;
+  }
+  
+  @include tablet {
+    width: 95%;
+    font-size: 1rem;
+  }
+
+  height: max-content;
+  padding: 5rem;
+  .header-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .sub-headers-lending {
+    background: none;
+  }
+  .sub-headers-content-lending {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .header-list-lending {
+    width: 100%;
+  }
+  .tab-item-lending {
+    width: 50%;
+    font-size: 1.3rem;
+    text-align: center;
+    @include tablet-landscape {
+      font-size: 2rem;
+    }
+  }
+  .hide-button {
+    visibility: hidden;
+  }
+  .lending-control {
+    background: linear-gradient(0deg, rgba(42,46,53,1) 0%, rgba(39,177,138,1) 170%);
+    border-radius: 10px;
+    font-family: Montserrat;
+  }
+  .permit-control-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // margin-left: 8rem;
+    .permit-number-control {
+      color: #F0F8FF;
+      font-size: 5rem;
+    }
+    .math-button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 2px solid #F0F8FFA3;
+      border-radius: 12px;
+      overflow: hidden;
+      width: 2.5em;
+      height: 2.5em;
+      // margin-left: 1em;
+      margin: 1rem 2rem;
+      cursor: pointer;
+      overflow:hidden;
+      &:hover {
+        background-color: #595e63a3;
+      }
+    }
+  }
+  .lending-calculation {
+    color: #F0F8FF;
+    background-color: rgba(240, 248, 255, 0.04);
+    border-radius: 12px;
+    .lending-calculation-item {
+      display: flex;
+    }
+    .lending-calculation-item-title {
+      width: 70%;
+      font-family: 'Montserrat';
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: rgba(240, 248, 255, 0.64);
+      line-height: 16px;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      @include tablet-sm {
+        font-size: .8em;
+      }
+    }
+    .lending-calculation-item-info {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      width: 30%;
+    }
+  }
+
+  .seperator {
+    width: 100%;
+    padding: 1rem 0 0;
+    font-size: 2rem;
+    line-height: 118%;
+    border-bottom: 1px solid rgba(240, 248, 255, 0.15);
+  }
+  .max-permit-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #F0F8FFA3;
+    cursor: pointer;
+    &:hover {
+      color: #ffffffc1;
+    }
+  }
+  .caption-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #F0F8FFA3;
+    margin-top: 2rem;
+    font-size: 1.5rem;
+
+    @include tablet-landscape {
+      font-size: 2rem;
+    }
+
+    @include tablet {
+      font-size: 1rem;
+    }
+  }
+  .button-group {
+    width: 100%;
+  }
+  .token-balance-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .avail-text {
+      color: #F0F8FF52;
+      font-size: 1.3rem;
+      font-weight: 700;
+    }
+
+    // .token-balance, .permit-balance {
+    //   color: white;
+    //   font-size: 2rem;
+    // }
+    // .token-currency {
+    //   color: white;
+    //   font-size: 1.3rem;
+    // }
+
+    .token-balance, .permit-balance {
+      color: white;
+      font-size: 1.5rem;
+      @include tablet-sm {
+        font-size: 1.3rem;
+      }
+    }
+    .token-currency {
+      color: white;
+      font-size: 1rem;
+    }
+  }
+
+  .zed-icon {
+    width: 2rem;
+  }
+}
+
+.lending-confirm-section {
+  text-align: center;
+  width: 100%;
+  color: white;
+  font-size: 1.5em;
+}
+
+.lending-tx-link-section {
+  text-align: center;
+}
+
+.error-section {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #E32636;
+  background: linear-gradient(270.03deg, rgba(227, 38, 54, 0.28) 0.03%, rgba(227, 38, 54, 0.28) 100.67%), #292D34;
+  border-radius: 10px;
+  font-size: 1.5rem;
+}

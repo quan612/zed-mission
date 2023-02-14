@@ -1,0 +1,632 @@
+@import '../../../assets/styles/mixins';
+
+.page-content.learn {
+  main {
+    .race-card {
+      border-radius: 8px;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.12);
+      width: 40.6rem;
+      height: 23.4rem;
+      padding-bottom: 3.2rem;
+      padding-top: 2.2rem;
+      position: relative;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      transition: all 0.3s ease-out;
+
+      @include tablet {
+        width: 100%;
+        margin-bottom: 1.6rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 90px;
+        &.bottom-tile {
+          margin-bottom: -0.4rem;
+        }
+      }
+
+      .race-right {
+        position: absolute;
+        right: 3.2rem;
+        bottom: 3.2rem;
+      }
+
+      &__skeleton {
+        background: #2a2e35;
+
+        .details {
+          @include tablet {
+            margin-top: 0.6rem;
+          }
+
+          .country {
+            width: 9.3rem;
+            height: 0.8rem;
+            margin-bottom: 1.5rem !important;
+
+            @include tablet {
+              width: 11.7rem;
+              margin-bottom: 1.6rem;
+            }
+          }
+          .city {
+            width: 28.1rem;
+            height: 1.6rem;
+            margin-bottom: 1.4rem !important;
+          }
+          .group {
+            width: 6.4rem;
+            height: 1.2rem;
+          }
+          .stake {
+            width: 10.4rem;
+            height: 1.2rem;
+            margin-top: 2.4rem !important;
+
+            @include tablet {
+              width: 9rem;
+              margin-top: 1rem !important;
+            }
+          }
+
+          .gates-left {
+            width: 12.3rem;
+            height: 1.2rem;
+          }
+        }
+
+        @include preloader-skeleton;
+      }
+
+      &___info {
+        $gradients-1: linear-gradient(
+            1.57deg,
+            #1c376d 1.41%,
+            rgba(25, 59, 104, 0.34) 41.32%,
+            rgba(23, 62, 98, 0) 79.59%
+          ),
+          linear-gradient(
+            358.74deg,
+            #7c6a47 1.02%,
+            rgba(79, 55, 52, 0.52) 52%,
+            rgba(23, 62, 98, 0) 98.87%,
+            rgba(41, 29, 60, 0) 98.87%
+          ),
+          linear-gradient(
+            27.54deg,
+            rgba(96, 54, 48, 0.93) 17.1%,
+            rgba(109, 73, 68, 0.32) 55.96%,
+            rgba(23, 62, 98, 0) 103.91%,
+            rgba(41, 29, 60, 0) 103.91%
+          );
+        $gradients-2: linear-gradient(
+            1.57deg,
+            #36284b 1.41%,
+            rgba(55, 25, 104, 0.34) 41.32%,
+            rgba(23, 62, 98, 0) 79.59%
+          ),
+          linear-gradient(
+            358.74deg,
+            #314b7c 1.02%,
+            rgba(27, 46, 82, 0.52) 52%,
+            rgba(23, 62, 98, 0) 98.87%,
+            rgba(41, 29, 60, 0) 98.87%
+          ),
+          linear-gradient(
+            358.74deg,
+            #194d54 1.02%,
+            rgba(57, 96, 101, 0.52) 52%,
+            rgba(23, 62, 98, 0) 98.87%,
+            rgba(41, 29, 60, 0) 98.87%
+          );
+        $gradients-mobile: linear-gradient(
+            90deg,
+            #1c376d 39.4%,
+            rgba(28, 55, 109, 0.5) 69.32%,
+            rgba(28, 55, 109, 0) 79.7%
+          ),
+          linear-gradient(
+            90deg,
+            #7c6a47 39.44%,
+            rgba(124, 106, 71, 0.5) 69.22%,
+            rgba(124, 106, 71, 0) 79.81%
+          ),
+          linear-gradient(
+            90deg,
+            #603630 39.4%,
+            rgba(96, 54, 48, 0.5) 69.39%,
+            rgba(96, 54, 48, 0) 79.7%
+          ),
+          linear-gradient(
+            90deg,
+            #36284b 39.4%,
+            rgba(54, 38, 80, 0.5) 69.29%,
+            rgba(55, 25, 104, 0) 79.7%
+          ),
+          linear-gradient(
+            90deg,
+            #314b7c 39.55%,
+            rgba(49, 75, 124, 0.5) 69.31%,
+            rgba(49, 75, 124, 0) 79.69%
+          ),
+          linear-gradient(
+            90deg,
+            #194d54 39.4%,
+            rgba(34, 118, 130, 0.5) 69.31%,
+            rgba(34, 118, 130, 0) 79.84%
+          );
+        &.first-tile {
+          background-image: nth($gradients-1, 1), url('../images/learn-page/learn-page-01.png');
+          @include tablet {
+            background-image: nth($gradients-mobile, 1), url('../images/learn-page/tile-1.png');
+            background-position: center;
+          }
+        }
+        &.second-tile {
+          background-image: nth($gradients-1, 2), url('../images/learn-page/learn-page-02.png');
+          @include tablet {
+            background-image: nth($gradients-mobile, 2), url('../images/learn-page/tile-2.png');
+          }
+        }
+        &.third-tile {
+          background-image: nth($gradients-1, 3), url('../images/learn-page/learn-page-03.png');
+          @include tablet {
+            background-image: nth($gradients-mobile, 3), url('../images/learn-page/tile-3.png');
+          }
+        }
+        &.fourth-tile {
+          background-image: nth($gradients-2, 1), url('../images/learn-page/learn-page-01-2.png');
+          @include tablet {
+            background-image: nth($gradients-mobile, 4), url('../images/learn-page/tile-4.png');
+          }
+        }
+        &.fifth-tile {
+          background-image: nth($gradients-2, 2), url('../images/learn-page/learn-page-02-2.png');
+          @include tablet {
+            background-image: nth($gradients-mobile, 5), url('../images/learn-page/tile-5.png');
+          }
+        }
+        &.sixth-tile {
+          background-image: nth($gradients-2, 3), url('../images/learn-page/learn-page-03-2.png');
+          @include tablet {
+            background-image: nth($gradients-mobile, 6), url('../images/learn-page/tile-6.png');
+          }
+        }
+        .space-mobile {
+          width: 90%;
+        }
+        .icons {
+          width: 46px;
+          height: 46px;
+          text-align: center;
+        }
+        .country {
+          letter-spacing: 0.06px;
+          line-height: 1.6rem;
+          margin-bottom: 0.5rem;
+        }
+        .city {
+          margin-top: 1.5rem;
+          margin-bottom: 1.5rem;
+          font-family: Montserrat;
+          font-weight: 700;
+          font-size: 24px;
+          line-height: 32px;
+          letter-spacing: 0.1px;
+          font-variant: small-caps;
+          @include tablet {
+            font-size: 14px;
+            line-height: 20px;
+            margin-bottom: 0.5rem;
+          }
+        }
+        .group {
+          letter-spacing: 0.07px;
+          margin-bottom: 2rem;
+          font-family: 'Montserrat';
+          font-weight: 500;
+          font-size: 13px;
+          line-height: 24px;
+          color: rgba(240, 248, 255, 0.64);
+          @include tablet {
+            font-size: 12px;
+            line-height: 16px;
+            letter-spacing: 0.2475px;
+          }
+        }
+        .stake {
+          font-style: normal;
+          font-size: 1.6rem;
+
+          b {
+            font-family: 'Montserrat';
+            font-weight: 500;
+            font-size: 1.4rem;
+          }
+        }
+
+        .race-right {
+          .gates-left {
+            font-size: 1.6rem;
+            letter-spacing: 0.07px;
+            color: #f0f8ff;
+            animation: appear 0.5s ease-out;
+
+            b {
+              font-size: 2.6rem;
+              font-weight: 500;
+              line-height: 2.6rem;
+              color: #f0f8ff;
+              margin-right: 0.8rem;
+            }
+          }
+          .buy-in {
+            height: 4.4rem;
+            width: 13.6rem;
+            text-decoration: none;
+            animation: appear 0.5s ease-out;
+            display: none;
+          }
+        }
+
+        .free-race-badge {
+          position: absolute;
+          right: 3.2rem;
+          top: 3.2rem;
+          width: 6.3rem;
+        }
+
+        &:hover {
+          filter: brightness(115%);
+
+          .gates-left {
+            display: none !important;
+          }
+          .buy-in {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ffffff;
+          }
+        }
+      }
+    }
+    section > div {
+      width: 129.6rem;
+      margin: 0 auto;
+
+      @include tablet {
+        width: 100%;
+        max-width: 65rem;
+        padding: 0 2rem;
+      }
+    }
+    .widgets-section {
+      padding-top: 4.4rem;
+      padding-bottom: 3.2rem;
+      background-color: #1e2128;
+      @include tablet {
+        padding-top: 0rem;
+      }
+      .title {
+        display: flex;
+        align-items: center;
+
+        img {
+          width: 1.8rem;
+          opacity: 0.34;
+        }
+        h3 {
+          font-family: Montserrat;
+          font-weight: 600;
+          margin-left: 1.4rem;
+          margin-bottom: 0;
+        }
+        @include tablet {
+          padding-top: 4rem;
+        }
+      }
+      .streaming-and-chat {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        height: 43.2rem;
+        margin-top: 2.4rem;
+
+        @include tablet {
+          flex-direction: column;
+          height: auto;
+          margin: 1.6rem -2rem 0;
+        }
+
+        .streaming-now {
+          width: 100%;
+          height: 100%;
+          border: 2px solid #62696f;
+          border-radius: 0.5rem;
+
+          @include tablet {
+            width: 100%;
+            height: 28rem;
+            border: 1px solid rgba(240, 248, 255, 0.64);
+            border-radius: 0;
+          }
+          @include mobile-lg {
+            height: 19.4rem;
+          }
+        }
+
+        .discord-chat,
+        .create-free-stable {
+          width: 41.3rem;
+          height: 100%;
+          border-radius: 0.5rem;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
+
+          @include tablet {
+            width: 100%;
+            height: 24.7rem;
+            margin-top: 2.4rem;
+          }
+        }
+
+        .discord-chat {
+          background: #2d2e35;
+          position: relative;
+          transition: 0.3s max-height ease-out;
+
+          @include tablet {
+            height: 33.4rem;
+            max-height: 50rem;
+            margin-top: 6rem;
+            box-shadow: none;
+
+            &.collapsed {
+              max-height: 0rem;
+            }
+          }
+
+          .title {
+            width: 100%;
+            position: absolute;
+            top: -1.2rem;
+            left: 0;
+            transform: translateY(-100%);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            @include tablet {
+              padding: 0 2rem;
+            }
+
+            .left-panel {
+              display: flex;
+              align-items: center;
+
+              img {
+                width: 2rem;
+                opacity: 0.34;
+              }
+              span {
+                margin-left: 1rem;
+              }
+            }
+            .right-panel {
+              display: none;
+
+              @include tablet {
+                display: block;
+              }
+
+              button {
+                padding: 0;
+                background: transparent;
+                border: none;
+
+                img {
+                  width: 2.8rem;
+                  opacity: 0.34;
+                  transform: rotate(-180deg);
+                  transition: 0.3s all ease-out;
+
+                  &.collapsed {
+                    transform: rotate(0);
+                  }
+                }
+              }
+            }
+          }
+          iframe {
+            border-radius: 0.5rem;
+
+            @include tablet {
+              border-radius: 0;
+            }
+          }
+        }
+        .create-free-stable {
+          background: #2a2e35 -21rem -11rem/100rem no-repeat url('../images/free-stable-bg.jpg');
+          padding: 15.6rem 4rem 4rem;
+          position: relative;
+
+          &::before {
+            content: '';
+            display: block;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 0.5rem;
+            background: linear-gradient(36deg, #2a2e35 0%, rgba(42, 46, 53, 0.32) 100%);
+
+            @include tablet {
+              background: linear-gradient(6deg, #2a2e35 33%, rgba(42, 46, 53, 0.18) 100%);
+            }
+          }
+
+          @include tablet {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            background-position: 50% 65%;
+            background-size: 130%;
+            padding: 7rem 2rem 4rem;
+          }
+          @include mobile-lg {
+            background-position: 50% -6.8rem;
+          }
+
+          > * {
+            position: relative;
+          }
+
+          h2 {
+            color: #ffffff;
+            font-family: Montserrat;
+            font-weight: 600;
+
+            @include tablet {
+              font-size: 2.8rem;
+              line-height: 3.2rem;
+
+              br {
+                display: none;
+              }
+            }
+            @include mobile-lg {
+              max-width: 25rem;
+            }
+          }
+          p {
+            @include tablet {
+              font-size: 1.4rem;
+              line-height: 2rem;
+              max-width: 33rem;
+              margin-bottom: 0;
+
+              br {
+                display: none;
+              }
+            }
+            @include mobile-lg {
+              max-width: 22rem;
+            }
+          }
+          button {
+            margin-top: 2.6rem;
+            width: 100%;
+            font-size: 1.8rem;
+            font-family: Montserrat;
+            font-weight: 600;
+
+            @include tablet {
+              width: 10.7rem;
+              height: 4.4rem;
+              text-transform: none !important;
+              position: absolute;
+              right: 2rem;
+              bottom: 4.4rem;
+              padding: 0;
+            }
+          }
+        }
+      }
+    }
+
+    .learn-section {
+      background-color: #1e2128;
+      padding-top: 4.4rem;
+      @include tablet {
+        padding-top: 0rem;
+      }
+    }
+
+    .race-section {
+      padding: 1.2rem 0;
+      @include tablet {
+        padding: 0rem;
+      }
+      background-color: #1e2128;
+      .next-to-run,
+      .up-and-coming {
+        max-width: 100%;
+
+        > .title {
+          display: flex;
+          align-items: center;
+
+          img {
+            width: 2.4rem;
+            object-fit: contain;
+            opacity: 0.34;
+          }
+          h3 {
+            margin-bottom: 0;
+            margin-left: 1.4rem;
+            color: rgba(240, 248, 255, 0.28);
+            font-family: Montserrat;
+            font-weight: 600;
+            font-size: 1.8rem;
+            letter-spacing: 1px;
+            line-height: 2.4rem;
+            text-transform: uppercase;
+          }
+
+          @include tablet {
+            padding-top: 4rem;
+          }
+        }
+        > .races {
+          margin-top: 2rem;
+        }
+      }
+
+      .next-to-run {
+        margin-bottom: 3.2rem;
+
+        .title {
+          justify-content: space-between;
+
+          &-left {
+            display: flex;
+            align-items: center;
+          }
+          &-right {
+            .see-all {
+              color: rgba(240, 248, 255, 0.64);
+              font-family: Montserrat;
+              font-weight: 600;
+              font-size: 1.4rem;
+              letter-spacing: 0.06px;
+              line-height: 2.4rem;
+              text-decoration: none;
+            }
+          }
+        }
+        .races {
+          @include mobile-lg {
+            margin-right: -2rem;
+          }
+        }
+      }
+      .up-and-coming {
+        .races {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+
+          @include tablet {
+            flex-direction: column;
+          }
+        }
+      }
+      .race-loader > img {
+        width: 10rem !important;
+      }
+    }
+  }
+}

@@ -1,0 +1,351 @@
+.page-content {
+  &.leaderboard {
+    background: url('../images/leaderboard-banner.jpg') no-repeat;
+    background-size: contain;
+
+    main {
+      width: 100rem;
+      margin: 0 auto;
+    }
+
+    @include mq-tablet {
+      main {
+        width: 100rem;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+    }
+
+    @include mq-mobile {
+      main {
+        width: 39rem;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+
+      &.leaderboard {
+        background: url('../images/leaderboard-banner-mobile.jpg') no-repeat;
+        background-size: 105%;
+
+        .page-top {
+          margin-top: 0;
+        }
+      }
+    }
+
+    .page-top {
+      width: 100%;
+      min-height: 10rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 3rem 0 5rem 0;
+
+      .heading {
+        margin: 2em 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+
+        &-text {
+          @extend .h3-text;
+          @extend .text-uppercase;
+          font-size: 3em;
+
+          &-sub {
+            @extend .primary-text;
+            @extend .text-center;
+            margin-top: 10px;
+          }
+        }
+      }
+
+      .categories {
+        margin-top: 5rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: left;
+        align-items: center;
+        width: 100%;
+
+        &-leaderboards-text {
+          @extend .primary-text;
+          @extend .primary-text.helpful;
+          @extend .text-uppercase;
+          @extend .bold;
+
+          padding: 0 3rem;
+          position: relative;
+          font-size: 2rem;
+
+          &::before {
+            content: '';
+            background: url('../images/icn-leaderboards-24.svg') no-repeat;
+            background-size: 2rem 2rem;
+            opacity: 0.4;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            position: absolute;
+          }
+
+          @include mq-tablet {
+            padding-bottom: 1rem;
+          }
+        }
+
+        &-buttons {
+          flex-wrap: wrap;
+          margin: -10px;
+          justify-content: left;
+          align-items: center;
+          display: flex;
+          row-gap: 1rem;
+          .category-button {
+            @extend .secondary-btn;
+            font-size: 1.4rem;
+            margin-left: 1rem;
+            padding: 0.4rem 1.2rem;
+            border-radius: 30px;
+
+            &-text {
+              @extend .text-capitalize;
+            }
+
+            &--selected {
+              @extend .secondary-btn;
+              @extend .secondary-btn.green;
+            }
+          }
+        }
+
+        &-my-horses-toggle {
+          min-width: 10rem;
+          margin-left: auto;
+          display: flex;
+          align-items: center;
+
+          &-switch {
+            margin-right: 15px;
+          }
+
+          &-label {
+            @extend .primary-text;
+            margin: 0;
+          }
+        }
+      }
+      @include mq-tablet {
+        .categories-buttons {
+          margin-left: 0;
+        }
+      }
+      @include mq-mobile {
+        .heading {
+          margin-top: 20rem;
+        }
+        .categories {
+          flex-direction: column;
+          flex-wrap: wrap;
+
+          justify-content: space-between;
+          align-items: flex-start;
+          margin-top: 1rem;
+          &-buttons {
+            margin: 0;
+            justify-content: left;
+            .category-button {
+              margin: 0 5px 0 0;
+            }
+          }
+
+          &-my-horses-toggle {
+            margin: 1rem 0 0 0;
+          }
+        }
+      }
+    }
+
+    .leaderboard {
+      &-main-grid {
+        display: grid;
+        grid-template-columns: 10% 10% 60% 10% 10%;
+
+        .horse-info-header-cell,
+        .horse-info-cell {
+          padding-left: 2rem;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: flex-start;
+        }
+
+        .horse-category-header-cell,
+        .horse-category-cell {
+          display: none;
+        }
+      }
+
+      &-header-row {
+        display: contents;
+      }
+
+      &-header-cell {
+        @extend .text-uppercase;
+        @extend .primary-text;
+        @extend .primary-text.bold;
+        @extend .primary-text.disabled;
+        @extend .primary-text.sm;
+
+        display: flex;
+        justify-content: center;
+        margin-bottom: 1rem;
+      }
+
+      &-contents-row {
+        @extend .primary-text;
+        display: contents;
+        width: 100%;
+
+        &:hover > div {
+          background-color: $light-grey;
+          cursor: pointer;
+        }
+
+        > div:first-child {
+          border-radius: 5px 0 0 5px;
+        }
+
+        > div:last-child {
+          border-radius: 0 5px 5px 0;
+        }
+
+        .rank-cell {
+          background-color: $light-grey;
+          border-radius: 4px;
+          min-width: 3rem;
+          padding: 2px 0;
+          text-align: center;
+
+          &--1,
+          &--2,
+          &--3 {
+            @extend .primary-text.bold;
+            color: #18191c;
+          }
+
+          &--1 {
+            background-color: $first-place-color;
+          }
+
+          &--2 {
+            background-color: $second-place-color;
+          }
+
+          &--3 {
+            background-color: $third-place-color;
+          }
+          &.unranked {
+            color: orangered;
+            font-size: 1.3rem;
+            font-weight: bold;
+            cursor: pointer;
+          }
+        }
+
+        .horse-name {
+          @extend .primary-text.bold;
+          @extend .text-ellipsis;
+          margin-right: 5px;
+        }
+
+        .stable-name {
+          @extend .primary-text.helpful;
+          margin-top: 2px;
+        }
+
+        .races-text,
+        .win-place-text {
+          @extend .primary-text.helpful;
+        }
+      }
+
+      &-contents-cell {
+        margin-bottom: 2rem;
+        background-color: #2a2e35;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 75px;
+        padding: 1rem 0;
+      }
+
+      &-skeleton-row {
+        @include preloader-skeleton;
+        display: contents;
+
+        > p {
+          border-radius: 5px;
+        }
+      }
+
+      &-skeleton-cell {
+        grid-column: 1 / -1;
+        width: 100%;
+        min-height: 75px;
+        color: gray;
+        margin-bottom: 2rem;
+      }
+
+      @include mq-mobile {
+        &-main-grid {
+          display: flex;
+          flex-direction: column;
+          grid-template-columns: none;
+        }
+
+        &-header-row {
+          display: none;
+        }
+
+        &-contents-row {
+          width: 100%;
+          display: flex;
+          justify-content: space-evenly;
+          margin-bottom: 16px;
+          background-color: #2a2e35;
+        }
+
+        &-contents-cell-mobile {
+          display: block;
+          min-height: 25px;
+
+          > .rank-cell {
+            font-style: italic;
+            width: 20px;
+            height: 100%;
+          }
+
+          &.horse-info-cell {
+            flex-grow: 1;
+          }
+
+          .horse-name-container {
+            display: flex;
+            width: 22rem;
+          }
+
+          &.horse-img-cell {
+            width: 80px;
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
+}

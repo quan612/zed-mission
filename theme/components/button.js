@@ -1,8 +1,5 @@
 import { mode } from "@chakra-ui/theme-tools";
 
-
-
-
 export const buttonStyles = {
   components: {
     Button: {
@@ -103,7 +100,6 @@ export const buttonStyles = {
           },
         }),
         signIn: (props) => ({
-
           border: "1px solid",
           borderColor: "brand.blue",
           borderRadius: "48px",
@@ -117,7 +113,7 @@ export const buttonStyles = {
               bg: "transparent",
               color: "#fff",
               opacity: 0.4,
-            }
+            },
           },
           _disabled: {
             opacity: 0.4,
@@ -154,7 +150,7 @@ export const buttonStyles = {
               bg: "brand.blue",
               color: "#fff",
               opacity: 0.4,
-            }
+            },
           },
           _disabled: {
             opacity: 0.4,
@@ -167,7 +163,7 @@ export const buttonStyles = {
               bg: "brand.blue",
               color: "#fff",
               opacity: 0.4,
-            }
+            },
           },
           _active: {
             bg: "#fff",
@@ -193,7 +189,7 @@ export const buttonStyles = {
               bg: "brand.blue",
               color: "#fff",
               opacity: 0.4,
-            }
+            },
           },
           _disabled: {
             color: "brand.blue",
@@ -206,7 +202,7 @@ export const buttonStyles = {
             _disabled: {
               color: "brand.blue",
               opacity: 0.6,
-            }
+            },
           },
           _active: {
             transition: "0.8s",
@@ -216,70 +212,76 @@ export const buttonStyles = {
         }),
 
         "ghost-base": (props) => ({
-          minWidth: "84px",
-          minH: "40px",
+          maxWidth: "121px",
+          maxH: "56px",
           borderColor: "transparent",
           bg: "transparent",
-          color: "brand.neutral0",
-
+          color: "rgba(236, 241, 251, 0.66)",
+          fontFamily: "Montserrat",
           textDecoration: "none",
           outline: "none",
           _hover: {
-            textDecoration: "underline",
+            textDecoration: "none",
             _disabled: {
               color: "#fff",
               opacity: 0.4,
               textDecoration: "none",
-            }
+            },
           },
           _disabled: {
             textDecoration: "none",
             color: "brand.neutral0",
             opacity: 0.4,
-
           },
           _focus: {
-
             color: "#fff",
             textDecoration: "underline",
             _disabled: {
               color: "#fff",
               opacity: 0.4,
               textDecoration: "none",
-            }
+            },
           },
           _active: {
-
             color: "neutral0",
             textDecoration: "underline",
           },
         }),
 
-        cyan: (props) => ({
-          minWidth: "84px",
-          minH: "40px",
+        zed: (props) => ({
+          maxWidth: "121px",
+          maxH: "56px",
           fontSize: "md",
-          bg: "brand.cyan",
-          borderRadius: "48px",
-          color: "#fff",
+          borderColor: "transparent",
+          borderRadius: "8px",
+          bg: "brand.zed2",
+
+          color: "#000",
           transition: "0.8s",
           _hover: {
             transition: "0.8s",
-            bg: "#fff",
-            color: "brand.cyan",
+            bg: "brand.zed2",
+            color: "#000",
           },
           _disabled: {
             cursor: "not-allowed",
-            borderColor: "brand.neutral1",
-            color: "brand.neutral1",
-            _placeholder: { color: "brand.neutral3" },
-          }
-          // _focus: {
-          //   bg: mode("brand.900", "brand.400")(props),
-          // },
-          // _active: {
-          //   bg: mode("blue.400", "blue.300")(props),
-          // },
+            borderColor: "transparent",
+            color: "#000",
+            opacity: 0.4,
+          },
+          _focus: {
+            color: "#000",
+            textDecoration: "underline",
+            _disabled: {
+              color: "#000",
+              opacity: 0.4,
+              textDecoration: "none",
+            },
+          },
+          _active: {
+            color: "#000",
+            textDecoration: "underline",
+          },
         }),
 
         twitter: (props) => ({
@@ -309,7 +311,7 @@ export const buttonStyles = {
           bg: "transparent", //mode("transparent", "purple.300")(props),
           color: "white",
           border: "1px solid",
-          borderColor: "purple.300",//"mode("purple.300", "secondaryGray.400")(props),
+          borderColor: "purple.300", //"mode("purple.300", "secondaryGray.400")(props),
           borderRadius: "48px",
           transition: "0.8s",
           _hover: {
@@ -372,6 +374,23 @@ export const buttonStyles = {
           },
         }),
       },
+      // sizes: {
+      //   sm: {
+      //     letterSpacing: "normal",
+      //     px: "3",
+      //     py: "1",
+      //   },
+      //   md: {
+      //     letterSpacing: "wide",
+      //     px: "5",
+      //     py: "4",
+      //   },
+      //   lg: {
+      //     letterSpacing: "wider",
+      //     px: "9",
+      //     py: "7",
+      //   },
+      // },
     },
   },
 };

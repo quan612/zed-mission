@@ -17,64 +17,32 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "lib": ["dom", "dom.iterable", "esnext"],
     "incremental": true,
     "baseUrl": ".",
     "paths": {
-      "@components/*": [
-        "components/*"
-      ],
-      "@styles/*": [
-        "styles/*"
-      ],
-      "@utils/*": [
-        "utils/*"
-      ],
-      "@repository/*": [
-        "repository/*"
-      ],
-      "@context/*": [
-        "context/*"
-      ],
-      "@shared/*": [
-        "shared/*"
-      ],
-      "@middlewares/*": [
-        "middlewares/*"
-      ],
-      "@hooks/*": [
-        "hooks/*"
-      ],
-      "@sass/*": [
-        "sass/*"
-      ],
-      "@enums/*": [
-        "enums/*"
-      ],
-      "@pages/*": [
-        "pages/*"
-      ],
-      "@theme/*": [
-        "theme/*"
-      ]
+      "@components/*": ["components/*"],
+      "@styles/*": ["styles/*"],
+      "@utils/*": ["utils/*"],
+      "@repository/*": ["repository/*"],
+      "@context/*": ["context/*"],
+      "@shared/*": ["shared/*"],
+      "@middlewares/*": ["middlewares/*"],
+      "@hooks/*": ["hooks/*"],
+      "@sass/*": ["sass/*"],
+      "@enums/*": ["enums/*"],
+      "@pages/*": ["pages/*"],
+      "@theme/*": ["theme/*"],
+      "@vhs-ui/*": ["vhs-ui/*"],
+      "@const/*": ["const/*"],
+      "@assets/*": ["assets/*"]
     }
   },
-  "include": [
-    "next-env.d.ts",
-    "**/*",
-    "**/*.tsx"
-  ],
-  "exclude": [
-    "node_modules"
-  ],
+  "include": ["next-env.d.ts", "**/*", "**/*.tsx"],
+  "exclude": ["node_modules"],
   "ts-node": {
-        "compilerOptions": {
-          "module": "commonjs"
-       }
-}
- 
+    "compilerOptions": {
+      "module": "commonjs"
+    }
+  }
 }

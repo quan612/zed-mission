@@ -1,0 +1,1232 @@
+.page-content.home {
+  main {
+    &.netflix-bg {
+      background-image: url('../images/Welcome-NetflixWebsiteBackground_v001.jpg');
+      background-size: cover;
+      background-position: top center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      top: 0;
+      height: 100%;
+      padding-bottom: 2em;
+
+      .widgets-section,
+      .race-section,
+      .horse-section {
+        background: none;
+        .title img {
+          opacity: 1 !important;
+        }
+      }
+
+      .overline-text,
+      .see-all {
+        color: rgb(240, 248, 255) !important;
+      }
+
+      .title h3 {
+        color: rgb(240, 248, 255) !important;
+      }
+
+      .outline-btn {
+        background: rgba(0, 0, 0, 0.6);
+      }
+    }
+
+    .outline-btn {
+      font-weight: 500;
+    }
+
+    section > div {
+      width: 129.6rem;
+      margin: 0 auto;
+
+      @include tablet {
+        width: 100%;
+        max-width: 65rem;
+        padding: 0 2rem;
+      }
+    }
+    .title {
+      display: flex;
+      align-items: center;
+
+      img {
+        width: 1.8rem;
+        opacity: 0.34;
+      }
+      h3 {
+        font-style: italic;
+        font-family: Montserrat;
+        font-weight: 600;
+        margin-left: 1.4rem;
+        margin-bottom: 0;
+      }
+    }
+    .get-started-bg {
+      background-image: linear-gradient(
+          180deg,
+          rgba(31, 28, 58, 0.9) 0%,
+          rgba(31, 28, 58, 0.9) 10%,
+          rgba(0, 0, 0, 0) 40%,
+          rgba(34, 38, 45, 0.75) 70%,
+          #22262d 90%
+        ),
+        url('../images/Welcome_horse_bg_a_2x.jpg');
+      background-size: cover;
+      background-position: bottom left;
+      background-repeat: no-repeat;
+      height: 105vh;
+      position: absolute;
+      top: -10rem;
+      width: 100%;
+      z-index: -1;
+
+      @include mobile-lg {
+        height: 100vh;
+        top: -5vh;
+        background-size: 100%;
+        background-position: top;
+        background-image: linear-gradient(
+            180deg,
+            rgba(31, 28, 58, 0.9) 0%,
+            rgba(31, 28, 58, 0.9) 10%,
+            rgba(0, 0, 0, 0) 40%,
+            rgba(34, 38, 45, 0.75) 70%,
+            #22262d 90%
+          ),
+          url('../images/Welcome_horse_bg_a_mobile.jpg');
+      }
+      @include desktop-5k {
+        height: 75vh;
+        background-position: center;
+      }
+    }
+    .get-started-section {
+      height: auto;
+      @include desktop-5k {
+        height: 50vh;
+      }
+      .get-started-content {
+        padding: 10rem 2rem;
+        text-align: center;
+        @include mobile-lg {
+          padding: 4rem 2rem;
+        }
+        .get-started-text {
+          font-size: 6rem;
+          text-align: center;
+          letter-spacing: 3px;
+          text-transform: uppercase;
+          color: #f0f8ff;
+          margin: 0 auto;
+          font-weight: 700;
+
+          @include mobile-lg {
+            padding: 4rem 0rem;
+            font-size: 4rem;
+          }
+        }
+        .get-started-cta {
+          margin: 0 auto;
+          font-size: 2rem;
+          padding: 2rem;
+          color: #f0f8ff;
+
+          @include mobile {
+            margin-top: 12rem;
+          }
+          @include mobile-lg {
+            margin-top: 10rem;
+            padding: 1.4rem;
+            font-size: 1.4rem;
+          }
+        }
+        button {
+          padding: 2.4rem 4.8rem;
+          font-size: 1.8rem;
+          letter-spacing: 1px;
+          margin-top: 4rem;
+          @include mobile-lg {
+            margin-top: 1.4rem;
+            width: 100%;
+            padding: 2.4rem;
+          }
+        }
+      }
+    }
+    .section-content {
+      .streaming {
+        width: 100%;
+        height: 65vh;
+        margin: 1rem 0 6rem 0;
+        @include mobile-lg {
+          height: 19.4rem;
+          font-weight: 700;
+        }
+        @include tablet {
+          width: 100%;
+          margin-top: 2rem;
+          border-radius: 0;
+          padding: 0;
+        }
+        @include laptop {
+          height: 35vh;
+        }
+        @include desktop-uhd {
+          height: 45vh;
+        }
+        // 1440p -> 4k
+        @include desktop-4k {
+          height: 35vh;
+        }
+        @include desktop-5k {
+          height: 25vh;
+        }
+      }
+    }
+
+    .widgets-section {
+      padding-top: 6.4rem;
+      padding-bottom: 3.2rem;
+      background-color: #1e2128;
+      .title {
+        display: flex;
+        align-items: center;
+
+        img {
+          width: 1.8rem;
+          opacity: 0.34;
+        }
+        h3 {
+          font-style: italic;
+          font-family: Montserrat;
+          font-weight: 600;
+          margin-left: 1.4rem;
+          margin-bottom: 0;
+        }
+      }
+
+      .streaming-and-chat {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        height: 43.2rem;
+        margin-top: 2.4rem;
+
+        @include tablet {
+          flex-direction: column;
+          height: auto;
+          margin: 1.6rem -2rem 0;
+        }
+
+        .streaming-logged-in {
+          width: 86rem;
+          height: 100%;
+          border: 2px solid #62696f;
+          border-radius: 0.5rem;
+          &.no-chat {
+            width: 100%;
+          }
+          @include tablet {
+            width: 100%;
+            height: 28rem;
+            border: 1px solid rgba(240, 248, 255, 0.64);
+            border-radius: 0;
+          }
+          @include mobile-lg {
+            height: 19.4rem;
+          }
+        }
+
+        .discord-chat,
+        .create-free-stable {
+          width: 41.3rem;
+          height: 100%;
+          border-radius: 0.5rem;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
+
+          @include tablet {
+            width: 100%;
+            height: 24.7rem;
+            margin-top: 2.4rem;
+          }
+        }
+
+        .discord-chat {
+          background: #2d2e35;
+          position: relative;
+          transition: 0.3s max-height ease-out;
+
+          @include tablet {
+            height: 33.4rem;
+            max-height: 50rem;
+            margin-top: 6rem;
+            box-shadow: none;
+
+            &.collapsed {
+              max-height: 0rem;
+            }
+          }
+
+          .title {
+            width: 100%;
+            position: absolute;
+            top: -1.2rem;
+            left: 0;
+            transform: translateY(-100%);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            @include tablet {
+              padding: 0 2rem;
+            }
+
+            .left-panel {
+              display: flex;
+              align-items: center;
+
+              img {
+                width: 2rem;
+                opacity: 0.34;
+              }
+              span {
+                margin-left: 1rem;
+              }
+            }
+            .right-panel {
+              display: none;
+
+              @include tablet {
+                display: block;
+              }
+
+              button {
+                padding: 0;
+                background: transparent;
+                border: none;
+
+                img {
+                  width: 2.8rem;
+                  opacity: 0.34;
+                  transform: rotate(-180deg);
+                  transition: 0.3s all ease-out;
+
+                  &.collapsed {
+                    transform: rotate(0);
+                  }
+                }
+              }
+            }
+          }
+          iframe {
+            border-radius: 0.5rem;
+
+            @include tablet {
+              border-radius: 0;
+            }
+          }
+        }
+        .create-free-stable {
+          background: #2a2e35 -21rem -11rem/100rem no-repeat url('../images/free-stable-bg.jpg');
+          padding: 15.6rem 4rem 4rem;
+          position: relative;
+
+          &::before {
+            content: '';
+            display: block;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 0.5rem;
+            background: linear-gradient(36deg, #2a2e35 0%, rgba(42, 46, 53, 0.32) 100%);
+
+            @include tablet {
+              background: linear-gradient(6deg, #2a2e35 33%, rgba(42, 46, 53, 0.18) 100%);
+            }
+          }
+
+          @include tablet {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            background-position: 50% 65%;
+            background-size: 130%;
+            padding: 7rem 2rem 4rem;
+          }
+          @include mobile-lg {
+            background-position: 50% -6.8rem;
+          }
+
+          > * {
+            position: relative;
+          }
+
+          h2 {
+            color: #ffffff;
+            font-family: Montserrat;
+            font-weight: 600;
+
+            @include tablet {
+              font-size: 2.8rem;
+              line-height: 3.2rem;
+
+              br {
+                display: none;
+              }
+            }
+            @include mobile-lg {
+              max-width: 25rem;
+            }
+          }
+          p {
+            @include tablet {
+              font-size: 1.4rem;
+              line-height: 2rem;
+              max-width: 33rem;
+              margin-bottom: 0;
+
+              br {
+                display: none;
+              }
+            }
+            @include mobile-lg {
+              max-width: 22rem;
+            }
+          }
+          button {
+            margin-top: 2.6rem;
+            width: 100%;
+            font-size: 1.8rem;
+            font-family: Montserrat;
+            font-weight: 600;
+
+            @include tablet {
+              width: 10.7rem;
+              height: 4.4rem;
+              text-transform: none !important;
+              position: absolute;
+              right: 2rem;
+              bottom: 4.4rem;
+              padding: 0;
+            }
+          }
+        }
+      }
+    }
+
+    .race-section {
+      padding: 3.2rem 0;
+      background-color: #1e2128;
+
+      @include tablet {
+        padding: 2.4rem 0 3.2rem;
+      }
+
+      .next-to-run,
+      .up-and-coming {
+        max-width: 100%;
+
+        > .title {
+          display: flex;
+          align-items: center;
+
+          img {
+            width: 2.4rem;
+            object-fit: contain;
+            opacity: 0.34;
+          }
+          h3 {
+            margin-bottom: 0;
+            margin-left: 1.4rem;
+            color: rgba(240, 248, 255, 0.28);
+            font-family: Montserrat;
+            font-weight: 600;
+            font-style: italic;
+            font-size: 1.8rem;
+            letter-spacing: 1px;
+            line-height: 2.4rem;
+            text-transform: uppercase;
+          }
+        }
+        > .races {
+          margin-top: 2rem;
+        }
+      }
+
+      .next-to-run {
+        margin-bottom: 3.2rem;
+
+        .title {
+          justify-content: space-between;
+
+          &-left {
+            display: flex;
+            align-items: center;
+          }
+          &-right {
+            .see-all {
+              color: rgba(240, 248, 255, 0.64);
+              font-family: Montserrat;
+              font-weight: 600;
+              font-size: 1.4rem;
+              letter-spacing: 0.06px;
+              line-height: 2.4rem;
+              text-decoration: none;
+            }
+          }
+        }
+        .races {
+          @include mobile-lg {
+            margin-right: -2rem;
+          }
+        }
+      }
+      .up-and-coming {
+        .races {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+
+          @include tablet {
+            flex-direction: column;
+          }
+        }
+      }
+      .race-loader > img {
+        width: 10rem !important;
+      }
+    }
+
+    .horse-section {
+      .on-sale {
+        margin-top: 6.4rem;
+
+        .horses {
+          display: flex;
+          align-items: center;
+          flex-wrap: wrap;
+          margin: 2rem -1.35rem -1.2rem;
+
+          @include tablet {
+            margin: 1.2rem 0 -0.8rem;
+
+            .sale-card:nth-child(n + 6) {
+              display: none;
+            }
+          }
+        }
+        .sold-out {
+          position: relative;
+          .message {
+            img {
+              max-width: 20rem;
+            }
+            p {
+              margin: 1rem 0;
+            }
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            max-width: 60rem;
+            transform: translateY(-50%) translateX(-50%);
+            margin: auto;
+            text-align: center;
+            @include tablet {
+              width: 100%;
+            }
+          }
+          .background {
+            display: flex;
+            flex-wrap: nowrap;
+            @include tablet {
+              max-height: 30rem;
+              flex-wrap: wrap;
+              overflow: hidden;
+            }
+          }
+        }
+      }
+
+      .in-stud {
+        margin-top: 6.4rem;
+
+        .horses {
+          margin: 2rem -1.2rem -0.8rem;
+          display: flex;
+          align-items: center;
+          flex-wrap: wrap;
+
+          @include tablet {
+            margin: 2rem 0 -1.6rem;
+          }
+
+          .horse {
+            width: 63.5rem;
+            height: 5.6rem;
+            margin: 0.8rem 1.2rem;
+            padding-left: 8rem;
+            padding-right: 1.6rem;
+            position: relative;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
+            border-radius: 0.8rem;
+            background-color: #2a2e35;
+            overflow: hidden;
+            display: grid;
+            grid-template-columns: 16rem 1fr 10rem;
+            align-items: center;
+            transition: all 0.3s ease-out;
+            text-decoration: none;
+            cursor: pointer;
+
+            @include tablet {
+              display: flex;
+              align-items: center;
+              flex-wrap: wrap;
+              width: 100%;
+              height: 10.8rem;
+              margin: 0 0 1.6rem;
+              padding: 1.2rem 1.8rem;
+              .horse-container {
+                position: absolute;
+                left: 0;
+                bottom: 0;
+              }
+              .horse-details {
+                padding-left: 30%;
+              }
+              &:nth-child(n + 6) {
+                display: none;
+              }
+            }
+
+            &:hover {
+              box-shadow: 0 4px 18px rgba(0, 0, 0, 0.24);
+              background-color: #373a42;
+            }
+
+            .label-horse {
+              position: absolute;
+              margin-left: 0;
+            }
+            .name {
+              color: #f0f8ff;
+              font-family: Montserrat;
+              font-weight: 600;
+              font-size: 1.6rem;
+              line-height: 2.4rem;
+
+              @include tablet {
+                order: 2;
+              }
+            }
+            .group {
+              color: rgba(240, 248, 255, 0.32);
+              font-family: Montserrat;
+              font-weight: 500;
+              font-size: 1.6rem;
+              line-height: 2.4rem;
+
+              @include tablet {
+                order: 4;
+                width: 100%;
+              }
+            }
+            .price {
+              font-style: normal;
+              font-size: 1.6rem;
+
+              @include tablet {
+                order: 3;
+              }
+            }
+          }
+        }
+
+        .open-stable {
+          margin-top: 3.2rem;
+          padding: 3.2rem 2rem;
+          box-shadow: 0 8px 12px rgba(0, 0, 0, 0.12);
+          border-radius: 0.8rem;
+          background-color: rgba(240, 248, 255, 0.04);
+          text-align: center;
+
+          .description {
+            h3 {
+              color: #f0f8ff;
+              font-family: Montserrat;
+              font-weight: 600;
+              font-size: 2.4rem;
+              letter-spacing: 0.1px;
+              line-height: 3.2rem;
+
+              @include tablet {
+                font-size: 2.2rem;
+                letter-spacing: 0.09px;
+                line-height: 2.8rem;
+              }
+            }
+          }
+        }
+        .stud-loader > img {
+          width: 8rem !important;
+        }
+
+        .breeding-closed {
+          position: relative;
+          padding: 2rem 0;
+          .message {
+            img {
+              max-width: 20rem;
+            }
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            max-width: 60rem;
+            transform: translateY(-50%) translateX(-50%);
+            margin: auto;
+            text-align: center;
+            @include tablet {
+              width: 100%;
+            }
+            h3 {
+              margin: 1rem 0;
+            }
+          }
+          .background {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            .front-page-stud-horse {
+              margin: 0.5rem;
+              opacity: 0.3;
+              width: 48.5%;
+              box-shadow: 0 4px 8px rgba(0, 0, 0, 0.125);
+              border-radius: 0.8rem;
+              background-color: #2a2e35;
+              .label-horse {
+                display: flex;
+                .horse-container {
+                  opacity: 0.25;
+                  filter: brightness(50);
+                  margin-right: 1rem;
+                }
+                .horse-info,
+                .stud-info {
+                  width: 45%;
+                  display: flex;
+                  justify-content: center;
+                  flex-direction: column;
+                  div {
+                    background-color: rgba(240, 248, 255, 0.12);
+                    border-radius: 0.5rem;
+                    height: 1rem;
+                    margin: 0.5rem;
+                  }
+                }
+                .horse-info {
+                  .name {
+                    width: 5rem;
+                  }
+                  .desc {
+                    width: 10rem;
+                  }
+                }
+                .stud-info {
+                  align-items: flex-end;
+                  .price {
+                    width: 5rem;
+                  }
+                  .time {
+                    width: 10rem;
+                  }
+                }
+              }
+              @include tablet {
+                width: 98.5%;
+              }
+            }
+
+            @include tablet {
+              flex-wrap: wrap;
+              overflow: hidden;
+            }
+          }
+        }
+      }
+
+      .create-free-stable {
+        width: 100%;
+        height: 18.4rem;
+        border-radius: 0.5rem;
+        background: center/cover no-repeat url('../images/free-stable-bg.jpg');
+        margin-top: 6.4rem;
+        padding: 5.5rem 4rem;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+
+        @include tablet {
+          width: auto;
+          height: 41.6rem;
+          margin: 6.4rem -2rem;
+          padding: 14.6rem 4.5rem 4rem;
+          border-radius: 0;
+          flex-direction: column;
+          justify-content: flex-end;
+          background-position: 50% -8.8rem;
+        }
+        @include mobile-lg {
+          padding: 14.6rem 4.5rem 2.4rem;
+        }
+
+        &::before {
+          content: '';
+          display: block;
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          border-radius: 0.5rem;
+          background: linear-gradient(36deg, #2a2e35 0%, rgba(42, 46, 53, 0.32) 100%);
+
+          @include tablet {
+            border-radius: 0;
+            background-image: linear-gradient(18deg, #2a2e35 43%, rgba(42, 46, 53, 0.12) 100%);
+          }
+        }
+
+        > * {
+          position: relative;
+        }
+
+        .left-panel {
+          h2 {
+            color: #ffffff;
+            font-family: Montserrat;
+            font-weight: 600;
+
+            @include tablet {
+              margin-bottom: 2.5rem;
+            }
+            @include mobile-lg {
+              max-width: 25rem;
+            }
+          }
+          p {
+            @include tablet {
+              margin-bottom: 2.6rem;
+            }
+          }
+        }
+        .right-panel {
+          @include tablet {
+            width: 100%;
+          }
+
+          button, a {
+            display: block;
+            width: 18.4rem;
+            height: 6.4rem;
+            font-size: 1.8rem;
+            font-family: Montserrat;
+            font-weight: 600;
+            &:hover {
+              color: #ffffff;
+              text-decoration: none;
+            }
+
+            @include tablet {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+
+    .social-proof-section {
+      height: auto;
+      @include desktop-5k {
+        height: 50vh;
+      }
+      .social-proof-content {
+        padding: 10rem 2rem;
+        text-align: center;
+        @include mobile-lg {
+          padding: 4rem 2rem;
+        }
+        .social-proof-text {
+          font-size: 6rem;
+          text-align: center;
+          letter-spacing: 3px;
+          text-transform: uppercase;
+          color: #f0f8ff;
+          margin: 0 auto;
+          font-weight: 700;
+
+          @include mobile-lg {
+            padding: 4rem 0rem;
+            font-size: 4rem;
+          }
+        }
+        .social-proof-cta {
+          margin: 0 auto;
+          font-size: 2rem;
+          padding: 2rem;
+          color: #f0f8ff;
+
+          @include mobile {
+            margin-top: 12rem;
+          }
+          @include mobile-lg {
+            margin-top: 10rem;
+            padding: 1.4rem;
+            font-size: 1.4rem;
+          }
+        }
+        button {
+          padding: 2.4rem 4.8rem;
+          font-size: 1.8rem;
+          letter-spacing: 1px;
+          margin-top: 4rem;
+          @include mobile-lg {
+            margin-top: 1.4rem;
+            width: 100%;
+            padding: 2.4rem;
+          }
+        }
+      }
+
+      .logo-container {
+        margin: 5rem 0rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+
+        img {
+          margin: 1.5rem 0rem;
+          width: 15rem;
+        }
+      }
+    }
+
+    .zest-section {
+      margin-top: 20rem;
+
+      @include tablet {
+        margin-top: 8.5rem;
+      }
+
+      .section-content {
+        height: 52.2rem;
+        border-radius: 1rem;
+        padding: 5.4rem 8.8rem 7.4rem;
+        background-repeat: no-repeat;
+        background-position: 15% 65%;
+        background-size: 150%;
+        background-image: linear-gradient(
+            to right,
+            rgba(58, 63, 70, 0.95) 0%,
+            rgba(34, 38, 45, 0) 100%
+          ),
+          url('../images/play-zest-bg.png');
+        position: relative;
+
+        @include tablet {
+          padding: 16.2rem 4rem 2rem;
+          height: 55.2rem;
+          max-width: 100%;
+          background-position: 40% 65%;
+          background-size: auto 100%;
+        }
+
+        @include mobile {
+          height: unset;
+        }
+
+        .horse {
+          > img {
+            width: 67rem;
+            object-fit: contain;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            border-bottom-right-radius: 1rem;
+
+            @include tablet {
+              width: 50rem;
+              bottom: 10rem;
+              right: -12rem;
+            }
+            @include mobile-lg {
+              right: -22rem;
+            }
+          }
+        }
+        .details {
+          z-index: 1;
+          position: relative;
+
+          @include tablet {
+            max-width: 50rem;
+          }
+
+          .title {
+            font-family: '';
+            font-size: 14.4rem;
+            font-style: italic;
+            letter-spacing: 8px;
+            text-transform: uppercase;
+            color: transparent;
+            margin: 0px;
+            -webkit-text-stroke: 3px rgb(210, 241, 18);
+
+            @include tablet {
+              font-size: 9.4rem;
+            }
+
+            @include mobile {
+              font-size: 7.4rem;
+            }
+          }
+          .subtitle {
+            color: #d2f112;
+            font-family: Montserrat;
+            font-weight: 600;
+            font-style: italic;
+            font-size: 3.4rem;
+            letter-spacing: 1.7px;
+            text-transform: uppercase;
+
+            @include tablet {
+              font-size: 2.4rem;
+            }
+          }
+          .description {
+            color: #f0f8ff;
+            font-family: Montserrat;
+            font-weight: 500;
+            font-size: 1.6rem;
+            line-height: 2.4rem;
+
+            br {
+              @include tablet {
+                display: none;
+              }
+            }
+          }
+          .play-zest-btn {
+            width: 21.2rem;
+            height: 6.5rem;
+            margin-top: 2.5rem;
+            border-radius: 0.8rem;
+            background-color: #d2f112;
+            color: #180e2f;
+            font-family: Montserrat;
+            font-weight: 600;
+            font-size: 2rem;
+            font-style: italic;
+            line-height: 2rem;
+            text-decoration: none;
+            text-transform: uppercase;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease-out;
+
+            &:hover {
+              background-color: rgb(232, 248, 135);
+            }
+          }
+        }
+      }
+    }
+
+    .zed-section {
+      margin-top: 12rem;
+
+      @include tablet {
+        margin-top: 8.5rem;
+      }
+
+      @include mobile-lg {
+        height: auto;
+        margin-top: 16rem;
+      }
+
+      .section-content {
+        height: 48rem;
+        border-radius: 1rem;
+        padding: 5.4rem 8.8rem 7.4rem;
+        background-repeat: no-repeat;
+        background-position: 15% 65%;
+        background-size: 150%;
+        background-image: url('../images/zed-bg-overlay.png'), url('../images/zed-bg.png');
+        position: relative;
+        @include tablet {
+          height: 36rem;
+          background-size: cover;
+          background-position: right top;
+        }
+        @include mobile-lg {
+          padding: 12rem 2rem 4rem 2rem;
+          height: unset;
+          max-width: 100%;
+          background-position: 40% 65%;
+          background-size: auto 100%;
+        }
+
+        @include mobile {
+          height: unset;
+        }
+
+        .horse {
+          > img {
+            width: 67rem;
+            object-fit: contain;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            border-bottom-right-radius: 1rem;
+
+            @include tablet {
+              width: 50rem;
+              bottom: 0;
+              right: 0;
+            }
+            @include mobile-lg {
+              width: 60rem;
+              right: -36rem;
+              bottom: 4rem;
+            }
+          }
+        }
+        .details {
+          z-index: 1;
+          position: relative;
+
+          @include tablet {
+            max-width: 50rem;
+          }
+
+          .title {
+            font-family: Montserrat;
+            font-weight: 900;
+            font-size: 14.4rem;
+            font-style: italic;
+            letter-spacing: 8px;
+            text-transform: uppercase;
+            color: transparent;
+            margin: 0px;
+            color: rgba(39, 177, 138, 0.1);
+            -webkit-text-stroke: 3px rgb(210, 241, 18);
+
+            @include tablet {
+              font-size: 9.4rem;
+            }
+
+            @include mobile {
+              font-size: 7.4rem;
+            }
+          }
+          .subtitle {
+            color: #d2f112;
+            font-family: Montserrat;
+            font-weight: 600;
+            font-style: italic;
+            font-size: 3.4rem;
+            letter-spacing: 1.7px;
+            text-transform: uppercase;
+
+            @include tablet {
+              font-size: 2.4rem;
+            }
+          }
+          .description {
+            color: #f0f8ff;
+            font-family: Montserrat;
+            font-weight: 500;
+            font-size: 1.6rem;
+            line-height: 2.4rem;
+
+            br {
+              @include tablet {
+                display: none;
+              }
+            }
+          }
+          .show-horse-btn {
+            width: 35rem;
+            height: 6.5rem;
+            margin-top: 2.5rem;
+            border-radius: 0.8rem;
+            cursor: pointer;
+            background-color: #d2f112;
+            color: #180e2f;
+            font-family: Montserrat;
+            font-weight: 600;
+            font-size: 2rem;
+            font-style: italic;
+            line-height: 2rem;
+            text-decoration: none;
+            text-transform: uppercase;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease-out;
+
+            &:hover {
+              background-color: rgb(232, 248, 135);
+            }
+            @include mobile-lg {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+
+    // common styles
+    .actions {
+      margin-top: 3.2rem;
+      text-align: center;
+
+      a {
+        display: inline-block;
+        padding: 1rem 2.4rem;
+        border-radius: 0.8rem;
+        font-size: 1.8rem;
+        letter-spacing: 0.08px;
+        line-height: 2.4rem;
+        text-decoration: none;
+        cursor: pointer;
+      }
+    }
+
+    .stake,
+    .price {
+      color: #27b18a;
+      font-size: 1.6rem;
+      font-family: Montserrat;
+      font-weight: 600;
+      letter-spacing: 0.33px;
+      line-height: 2.4rem;
+      text-transform: uppercase;
+
+      b {
+        color: rgba(240, 248, 255, 0.32);
+        font-family: Montserrat;
+        font-weight: 600;
+        font-size: 1.2rem;
+        font-weight: 500;
+        margin-left: 0.4rem;
+      }
+    }
+  }
+}

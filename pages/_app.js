@@ -12,6 +12,8 @@ import { Box, ChakraProvider } from "@chakra-ui/react";
 import { useChallengerPageLoading } from "lib/hooks/useChallengerPageLoading";
 import { Analytics } from "@vercel/analytics/react";
 import theme from "theme/theme";
+import "@fontsource/montserrat";
+import "@fontsource/orbitron";
 
 import {
   Chart as ChartJS,
@@ -43,6 +45,7 @@ const queryClient = new QueryClient();
 
 import { AnimatePresence } from "framer-motion";
 import UserLayout from "@components/end-user/UserLayout";
+import { useZedTheme } from "@vhs-ui/theme";
 export function reportWebVitals(metric) {
   // console.log(metric);
 }
@@ -50,6 +53,8 @@ export function reportWebVitals(metric) {
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
   const { isPageLoading } = useChallengerPageLoading();
+
+  // const zedTheme = useZedTheme();
 
   useEffect(() => {
     const handleRouteChange = (url) => {
@@ -95,13 +100,13 @@ function MyApp({ Component, pageProps }) {
                 </AdminLayout>
               ) : (
                 <UserLayout {...pageProps}>
-                  <AnimatePresence
+                  {/* <AnimatePresence
                     mode="wait"
                     initial={false}
                     transitionDuration="0.2s"
-                  >
-                    <Component {...pageProps} key={router.asPath} />
-                  </AnimatePresence>
+                  > */}
+                  <Component {...pageProps} key={router.asPath} />
+                  {/* </AnimatePresence> */}
 
                   <Analytics />
                 </UserLayout>

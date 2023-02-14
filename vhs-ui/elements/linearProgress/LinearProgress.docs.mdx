@@ -1,0 +1,84 @@
+---
+description: A Button component.
+---
+import { Box, ChakraProvider, extendTheme } from '@chakra-ui/react'
+import LinearProgress, { LinearProgressStep, LinearProgressStyleConfig, StepStyleConfig } from './'
+
+A component that does something special and renders text in a div.
+
+### Design
+<iframe
+  title="button.docs.mdx"
+  style={{ border: '1px solid rgba(0, 0, 0, 0.1)' }}
+  width="800"
+  height="450"
+  src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FCoow4JMug6L74J0xhUgvH7%2FAPAC-2516-ELO-react-tour%3Fnode-id%3D523%253A9380"
+  allowfullscreen></iframe>
+
+
+### Component usage
+
+```js
+<LinearProgress max={10} current={3}>
+  {({ stepsArray }) => (
+    <>
+      {stepsArray.map(({ value, isActive, isFirst, isInProg }) => (
+        <LinearProgressStep
+          key={value}
+          value={value}
+          isActive={isActive}
+          isFirst={isFirst}
+          isInProg={isInProg}
+        />
+      ))}
+    </>
+  )}
+</LinearProgress>
+```
+
+### Render hello world!
+
+
+```js live
+<ChakraProvider theme={extendTheme({
+  components: {
+    LinearProgress: LinearProgressStyleConfig,
+    ProgressStep: StepStyleConfig,
+  },
+  styles: {
+    global: {
+      body: {
+        fontFamily: '',
+        color: '',
+        bg: '',
+        lineHeight: '',
+      },
+      '*::placeholder': {
+        color: '',
+      },
+      '*, *::before, &::after': {
+        borderColor: '',
+        wordWrap: '',
+      },
+    },
+  },
+})}>
+      <Box w={400} bg={'#2A2E35'} p={10}>
+        <LinearProgress max={10} current={3}>
+          {({ stepsArray }) => (
+            <>
+              {stepsArray.map(({ value, isActive, isFirst, isInProg }) => (
+                <LinearProgressStep
+                  key={value}
+                  value={value}
+                  isActive={isActive}
+                  isFirst={isFirst}
+                  isInProg={isInProg}
+                />
+              ))}
+            </>
+          )}
+        </LinearProgress>
+      </Box>
+    </ChakraProvider>
+```

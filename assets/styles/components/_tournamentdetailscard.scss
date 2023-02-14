@@ -1,0 +1,92 @@
+.tournament-card {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  background: rgba(240, 248, 255, 0.04);
+  backdrop-filter: blur(32px);
+  border-radius: 8px;
+  width: 1000px;
+  height: 92px;
+  padding: 24px;
+
+  &-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: left;
+
+    &-header {
+      @extend .primary-caption;
+      @extend .helpful;
+      font-size: 14px;
+      &-no-icon {
+        @extend .primary-caption;
+        @extend .helpful;
+        font-size: 14px;
+        margin-top: 9px;
+      }
+    }
+
+    &-timer {
+      min-width: 11%;
+    }
+
+    &-text {
+      @extend .white-secondary;
+      text-transform: inherit;
+    }
+
+    &-info {
+      margin: auto;
+      text-transform: capitalize;
+      text-align: center;
+      @extend .white-secondary;
+    }
+  }
+
+  &-prize-pool {
+    display: flex;
+
+    &-text {
+      margin-top: auto;
+      @extend .primary-text;
+      @extend .capitalize;
+      @extend .helpful;
+      @extend .bold;
+
+      &-green {
+        margin-right: 0.4rem;
+        @extend .green;
+      }
+    }
+  }
+
+  @include mq-mobile {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: fit-content;
+    height: fit-content;
+    text-align: start;
+    margin: 0 4px 0 4px;
+    &-details {
+      display: flex;
+      flex-direction: column;
+      text-align: start;
+      padding: 1rem 0 1rem 0;
+
+      &-info {
+        margin-left: 0;
+        text-align: none;
+      }
+    }
+
+    &-prize-pool {
+      &-text {
+        margin-left: 0;
+      }
+    }
+  }
+}

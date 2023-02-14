@@ -1,0 +1,123 @@
+.next-run-list {
+  width: 100%;
+  display: flex;
+  align-items: stretch;
+  justify-content: flex-start;
+  margin: 2rem 0 0;
+
+  @include tablet {
+    width: auto;
+    overflow-x: auto;
+    scrollbar-width: none;
+    margin-right: 0;
+    -ms-overflow-style: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  .race-tile {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 24rem;
+    min-width: 24rem;
+    margin: 0 1.2rem;
+    padding: 1.6rem 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
+    border-radius: 4px;
+    background-color: #2a2e35;
+    background-image: linear-gradient(
+      76deg,
+      rgba(34, 38, 45, 0.97) 0%,
+      rgba(34, 38, 45, 0.62) 100%
+    );
+    text-decoration: none;
+    transition: all 0.3s ease-out;
+
+    @include tablet {
+      margin-right: 2rem;
+    }
+
+    &.green-gradient-background {
+      background-image: linear-gradient(
+        90deg,
+        rgba(39, 177, 138, 0.24) 0%,
+        rgba(42, 46, 53, 0.06) 100%
+      );
+    }
+
+    &:hover {
+      background-color: #373a42;
+    }
+
+    &:nth-child(2) {
+      opacity: 0.95;
+    }
+    &:nth-child(3) {
+      opacity: 0.9;
+    }
+    &:nth-child(4),
+    &:nth-child(5) {
+      opacity: 0.85;
+    }
+
+    .race-name {
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      margin-bottom: 0.8rem;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+    .free-race-badge {
+      width: 5.3rem;
+      margin-left: 1.2rem;
+      flex-shrink: 0;
+    }
+    .info {
+      display: flex;
+      justify-content: space-between;
+
+      .price {
+        font-weight: bold;
+        font-style: italic;
+        color: #27b18a;
+      }
+
+      .time {
+        font-style: italic;
+
+        .countdown {
+          color: #f0f8ff;
+          font-weight: bold;
+        }
+      }
+    }
+
+    &__skeleton {
+      background: #2a2e35;
+
+      .race-name {
+        height: 1.2rem;
+        &--long {
+          width: 17.9rem;
+        }
+        &--short {
+          width: 9.6rem;
+        }
+      }
+      .price {
+        width: 7.2rem;
+        height: 0.8rem;
+      }
+      .time {
+        width: 4.8rem;
+        height: 0.8rem;
+      }
+
+      @include preloader-skeleton;
+    }
+  }
+}

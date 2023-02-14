@@ -1,0 +1,104 @@
+.page-content.events {
+  main {
+    flex: 1;
+    width: 129.6rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+
+    .next-race {
+      font-family: Montserrat;
+      font-weight: 600;
+      margin: 4.4rem 0;
+
+      img {
+        margin-right: 1.4rem;
+        opacity: 0.32;
+        width: 2rem;
+      }
+    }
+    .filter-toggles {
+      display: flex;
+      flex-wrap: wrap;
+      margin-left: 2rem;
+      @include mobile-lg {
+        width: 100%;
+        margin-left: 0;
+      }
+    }
+
+    .my-racehorse-only {
+      margin-right: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .primary-text {
+        margin-left: 2rem;
+        margin-bottom: 0;
+      }
+    }
+
+    .accordion-container {
+      margin-top: 3.2rem;
+
+      .accordion-label {
+        display: flex;
+        justify-content: space-between;
+        padding: 1.2rem 3.2rem;
+        border-bottom: solid 1px rgba(240, 248, 255, 0.12);
+
+        .left {
+          width: 70%;
+          display: flex;
+
+          .location {
+            width: 40%;
+          }
+          .details {
+            width: 25%;
+          }
+          .class {
+            width: 17%;
+          }
+          .distance {
+            width: 18%;
+          }
+        }
+
+        .right {
+          width: 30%;
+          display: flex;
+          text-align: right;
+
+          .buy-in {
+            width: 50%;
+          }
+
+          .registered {
+            width: 50%;
+          }
+        }
+      }
+    }
+  }
+
+  &.mobile {
+    main {
+      width: 100%;
+      .my-racehorse-only {
+        margin: 1rem 0;
+      }
+      .next-race {
+        flex-wrap: wrap;
+        margin-top: 2.4rem;
+        padding: 0 2rem;
+      }
+      .accordion-container {
+        margin-top: 1rem;
+        .accordion-label {
+          display: none;
+        }
+      }
+    }
+  }
+}

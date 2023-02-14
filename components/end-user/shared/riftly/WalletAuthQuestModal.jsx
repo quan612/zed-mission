@@ -114,7 +114,7 @@ const WalletAuthQuestModal = ({ isOpen, onClose, isSignUp = false }) => {
             {currentView === CONNECTABLE && (
               <>
                 <Heading color="white" fontSize={"xl"} align="center">
-                  Connect with wallet
+                  Connect with new wallet
                 </Heading>
 
                 <Button

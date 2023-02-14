@@ -1,0 +1,56 @@
+---
+description: A Modal component.
+---
+
+import {
+  Modal,
+  ModalOverlay,
+  ModalContent,
+  ModalHeader,
+  ModalBody,
+  ModalCloseButton,
+  ModalFooter,
+} from './Modal'
+
+### Design
+
+<iframe
+  style={{ border: '1px solid rgba(0, 0, 0, 0.1)' }}
+  width="800"
+  height="450"
+  src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FqNrgOE1l579vPmf2GutFM9%2FComponents---UI-(T)%3Fnode-id%3D327%253A40315"
+  allowFullScreen
+></iframe>
+
+### Component usage
+
+```js
+export const BasicModal = () => {
+  const { isOpen, onClose, onOpen } = useDisclosure()
+
+  return (
+    <ChakraProvider theme={theme}>
+      <Button onClick={onOpen} aria-label="open-modal-button">
+        Open Modal
+      </Button>
+      <Modal isOpen={isOpen} onClose={onClose}>
+        <ModalOverlay />
+        <ModalContent>
+          <ModalHeader>Modal Title</ModalHeader>
+          <ModalCloseButton />
+          <ModalBody>Some content</ModalBody>
+
+          <ModalFooter>
+            <Button colorScheme="blue" mr={3} onClick={onClose}>
+              Close
+            </Button>
+            <Button colorScheme="blue" variant="ghost">
+              Secondary Action
+            </Button>
+          </ModalFooter>
+        </ModalContent>
+      </Modal>
+    </ChakraProvider>
+  )
+}
+```

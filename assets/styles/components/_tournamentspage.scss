@@ -1,0 +1,410 @@
+.page-content {
+  &.tournaments {
+    background: url('../images/tournaments-list-banner.png') no-repeat;
+    background-size: contain;
+
+    main {
+      width: 130rem;
+      margin: 0 auto;
+    }
+
+    @include mq-tablet {
+      main {
+        width: 100rem;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+    }
+
+    @include mq-mobile {
+      main {
+        width: auto;
+        padding: 0 2rem;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+
+      &.tournaments {
+        .page-top {
+          margin-top: 0;
+        }
+      }
+    }
+
+    .container {
+      margin-top: 5rem;
+      display: flex;
+      flex-direction: row;
+      justify-content: right;
+      align-items: center;
+      width: 100%;
+      &-my-horses-toggle {
+        min-width: 10rem;
+        margin-right: auto;
+        display: flex;
+        align-items: center;
+        flex-direction: row-reverse;
+        &-switch {
+          margin-right: 15px;
+        }
+        &-label {
+          @extend .primary-text;
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    .tournaments-icon {
+      display: inline-block;
+      width: 34px;
+      height: 34px;
+      margin-right: 8px;
+      margin-top: 10px;
+      @include tablet-landscape {
+        display: inline-block;
+        width: 32px;
+        height: 32px;
+        margin-right: 6px;
+      }
+
+      @include mq-mobile {
+      }
+    }
+
+    .tournaments-list {
+      &-skeleton-row {
+        @include preloader-skeleton;
+        margin: 2rem 5rem;
+        display: contents;
+
+        > p {
+          border-radius: 5px;
+        }
+      }
+
+      &-skeleton-cell {
+        grid-column: 1 / -1;
+        width: 100%;
+        min-height: 7rem;
+        color: gray;
+        margin-bottom: 2rem;
+      }
+
+      &-header {
+        width: 100%;
+        min-height: 15rem;
+        display: flex;
+        flex-direction: column;
+        margin: 4.4rem auto;
+
+        .heading {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+
+          &-text {
+            @extend .h3-text;
+            @extend .text-uppercase;
+            font-size: 3em;
+          }
+        }
+      }
+
+      @include mq-mobile {
+        &-header {
+          margin-top: 2.4rem;
+          margin-bottom: 2rem;
+          .heading {
+            display: flex;
+            flex-direction: column;
+            flex-flow: column-reverse;
+            align-items: inherit;
+            margin-top: 0;
+
+            .tournaments {
+              margin-top: 2rem;
+            }
+
+            &-text {
+              text-align: center;
+              margin-bottom: 3rem;
+            }
+          }
+        }
+      }
+
+      &-grid {
+        width: 100%;
+
+        &-header-row,
+        &-row {
+          display: grid;
+          grid-template-columns: 6.5fr 3fr 3fr 3fr 2.5fr 2fr;
+          align-items: center;
+        }
+
+        &-header-row {
+          padding: 0 2rem;
+          margin-bottom: 1rem;
+
+          &-cell {
+            @extend .primary-caption;
+            @extend .text-uppercase;
+            @extend .helpful;
+            @extend .bold;
+
+            &-unit {
+              @extend .text-lowercase;
+            }
+          }
+        }
+
+        &-header-row :last-child {
+          text-align: right;
+        }
+
+        &-row {
+          padding: 2.5rem 2rem;
+          min-height: 2rem;
+          background: #2b2942;
+
+          box-shadow: inset 0px -1px 0px rgba(255, 255, 255, 0.04);
+          &:hover {
+            background: linear-gradient(0deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.04)),
+              linear-gradient(0deg, #2b2942, #2b2942);
+          }
+
+          &--complete {
+            opacity: 0.7;
+            background: rgba(34, 38, 45, 0.0001);
+            box-shadow: inset 0px -1px 0px rgba(255, 255, 255, 0.04);
+            &:hover {
+              background: linear-gradient(
+                  0deg,
+                  rgba(255, 255, 255, 0.04),
+                  rgba(255, 255, 255, 0.04)
+                ),
+                linear-gradient(0deg, #2b2942, #2b2942);
+            }
+          }
+
+          &:hover {
+            cursor: pointer;
+            text-decoration: none;
+            color: white;
+            background-blend-mode: lighten;
+          }
+        }
+
+        &-column {
+          @extend .primary-text;
+          @extend .text-capitalize;
+
+          &-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            &-name {
+              display: flex;
+              margin-right: 6px;
+            }
+
+            &-labels {
+              display: flex;
+              padding-top: 2px;
+            }
+          }
+
+          &--name-container {
+            display: flex;
+          }
+
+          &--status-distances-header {
+            &-unit {
+              @extend .text-lowercase;
+            }
+          }
+
+          &-name {
+            @extend .primary-text;
+            @extend .bold;
+            padding: 4px;
+            margin-right: 9px;
+            font-size: 16px;
+          }
+
+          &--prize-pool-container {
+            text-align: right;
+          }
+
+          &--prize-pool {
+            @extend .green-text;
+          }
+
+          &--prize-pool-usd {
+            @extend .overline-text.sm;
+            margin-left: 0.5rem;
+            font-weight: 700;
+            text-align: right;
+          }
+
+          &--distances-container {
+            @extend .overline-text.md;
+            color: rgba(240, 248, 255, 0.32);
+          }
+
+          &--date-container {
+            text-transform: inherit;
+          }
+        }
+      }
+
+      @include tablet-landscape {
+        &-grid {
+          &-row {
+            display: grid;
+            grid-template-columns: 7fr 3fr 3fr 3fr 2fr 2fr;
+            align-items: center;
+            background: #2b2942;
+            padding: 2rem 2rem 2rem 2rem;
+            border-bottom: 1px solid rgba(240, 248, 255, 0.1);
+
+            &:hover {
+              background: none;
+            }
+
+            &--complete {
+              opacity: 1;
+              background: none;
+            }
+          }
+
+          &-column {
+            &--name-container {
+              display: flex;
+              flex-direction: row;
+              justify-content: flex-start;
+            }
+
+            &--prize-pool-container {
+              text-align: right;
+            }
+
+            &-name {
+              font-size: 1.6rem;
+
+              &-horse-icon {
+                width: 16px;
+                height: 16px;
+                margin-right: 4px;
+              }
+              &--day-of-week {
+                font-size: 1.4rem;
+                align-self: flex-start;
+              }
+            }
+          }
+        }
+      }
+
+      @include mq-mobile {
+        &-grid {
+          &-header {
+            &-row {
+              display: none;
+            }
+          }
+
+          &-row {
+            display: flex;
+            flex-direction: column;
+            align-items: stretch;
+            background: #2b2942;
+            padding: 2rem 2rem 2rem 2rem;
+            border-bottom: 1px solid rgba(240, 248, 255, 0.1);
+
+            &:hover {
+              background: none;
+            }
+
+            &--complete {
+              opacity: 1;
+              background: none;
+            }
+          }
+
+          &-column {
+            &--name-container {
+              display: flex;
+              flex-direction: column;
+              align-items: flex-start;
+            }
+
+            &--prize-pool-container {
+              text-align: left;
+            }
+
+            &-container-name {
+              display: flex;
+              align-items: center;
+            }
+
+            &-container-labels {
+              margin-top: 6px;
+            }
+
+            &-name {
+              font-size: 2rem;
+              margin-right: 0.4em;
+              padding-top: auto;
+            }
+
+            &--status-distances-header,
+            &--status-container,
+            &--status-distances-container,
+            &--date-prize-header,
+            &--date-prize-container {
+              display: grid;
+              grid-template-columns: 1fr 1fr;
+            }
+
+            &--status-distances-header,
+            &--date-prize-header {
+              color: rgba(240, 248, 255, 0.28);
+              font-size: 1.4rem;
+              font-weight: 600;
+              letter-spacing: 1px;
+              line-height: 2.4rem;
+              font-style: italic;
+              margin: 2rem 0 0.5rem 0;
+            }
+
+            &--date-prize-header,
+            &--date-prize-container {
+              opacity: 0.6;
+            }
+
+            &--status-distances-container {
+              &-distances {
+                font-size: 1.4rem;
+                font-weight: bold;
+                color: rgba(240, 248, 255, 0.64);
+              }
+            }
+          }
+        }
+      }
+    }
+
+    @include mq-tablet {
+      .leaderboard-standings {
+        width: 100%;
+      }
+    }
+  }
+}

@@ -1,0 +1,706 @@
+.page-content.winnings {
+  .top-section {
+    .top-content {
+      width: 129.6rem;
+      margin: 4.4rem auto;
+      align-items: center;
+
+      .down {
+        padding-bottom: 25px;
+
+        .claim-list {
+          .c-box {
+            height: 100%;
+            padding: 0 8px 0;
+            margin-bottom: 16px;
+            position: relative;
+            box-sizing: border-box;
+            outline: none;
+
+            &:hover {
+              .c-box-content {
+                opacity: 0;
+              }
+              .c-box-content-hover {
+                opacity: 1;
+              }
+            }
+
+            &-content {
+              height: 100%;
+              display: flex;
+              border-radius: 8px;
+              background-color: #2a2e35;
+              background: linear-gradient(
+                135deg,
+                rgba(39, 177, 138, 0.3) 0%,
+                rgba(42, 46, 53, 0.24) 100%
+              );
+              box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.06), 0 4px 6px 0 rgba(39, 177, 138, 0.06);
+              transition: opacity 0.3s;
+              overflow: hidden;
+
+              .horse-img {
+                width: 40%;
+                position: relative;
+                z-index: 100;
+                background-size: 200% 200%;
+                background-position: left top;
+
+                img {
+                  position: absolute;
+                  user-select: none;
+                  height: 100%;
+                  width: 100%;
+                  object-fit: cover;
+                }
+
+                .overlay {
+                  width: 100%;
+                  height: 100%;
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  mix-blend-mode: overlay;
+                  -webkit-mask-image: url('../images/winnings-page-horse-mask.svg');
+                  mask-image: url('../images/winnings-page-horse-mask.svg');
+                  -webkit-mask-position: center center;
+                  mask-position: center center;
+                  -webkit-mask-repeat: no-repeat;
+                  mask-repeat: no-repeat;
+                  -webkit-mask-size: cover;
+                  mask-size: cover;
+                  transform: translateZ(0);
+                }
+
+                .gate-number {
+                  border-radius: 14px;
+                  color: white;
+                  height: 20px;
+                  width: 20px;
+                  position: absolute;
+                  top: 1rem;
+                  right: 1rem;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  text-align: center;
+                  text-shadow: 0px 0px 5px black;
+                }
+              }
+
+              .race-info {
+                width: 60%;
+                height: 12.8rem;
+                padding: 1.4rem;
+                position: relative;
+                z-index: 200;
+
+                .place {
+                  white-space: nowrap;
+
+                  .price {
+                    display: inline-block;
+                    line-height: 1.8rem;
+                    height: 1.8rem;
+                    font-size: 2.2rem;
+                  }
+                }
+
+                .horse-name {
+                  font-style: italic;
+                  font-size: 1.4rem;
+                  line-height: 1.4rem;
+                }
+
+                .race {
+                  &.overline-text {
+                    font-size: 1.1rem;
+                    line-height: 1.6rem;
+                  }
+                }
+              }
+
+              &-hover {
+                position: absolute;
+                top: 0;
+                left: 8px;
+                width: calc(100% - 16px);
+                box-sizing: border-box;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                border: 2px solid #27b18a;
+                border-radius: 8px;
+                background-color: rgba(39, 177, 138, 0.21);
+                box-shadow: 0 0 8px 0 rgba(39, 177, 138, 0.32), 0 4px 6px 0 rgba(0, 0, 0, 0.12);
+                opacity: 0;
+                transition: opacity 0.3s;
+
+                .claim-btn {
+                  margin-top: 1.6rem;
+                  padding: 0.8rem 1.6rem;
+                  box-shadow: none;
+                }
+              }
+            }
+          }
+
+          .slick-slider {
+            .slick-arrow {
+              position: absolute;
+              top: 0;
+              bottom: 0;
+              height: 100%;
+              width: 60px;
+              z-index: 10;
+              color: transparent;
+              background-color: transparent;
+              opacity: 0;
+              transition: opacity 300ms;
+
+              &:before {
+                opacity: 0.75;
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+              }
+
+              &.slick-prev {
+                left: 0;
+                background-image: linear-gradient(to left, transparent, #1e2028);
+
+                &:before {
+                  content: url('../images/icn-arrow-previous-24.svg');
+                }
+              }
+
+              &.slick-next {
+                right: 0;
+                background-image: linear-gradient(to right, transparent, #1e2028);
+
+                &:before {
+                  content: url('../images/icn-arrow-forward-24.svg');
+                }
+              }
+
+              &:hover {
+                &:before {
+                  opacity: 1;
+                }
+              }
+            }
+
+            .slick-dots {
+              position: absolute;
+              bottom: -18px;
+              display: block;
+              width: 100%;
+              padding: 0;
+              margin: 0;
+              list-style: none;
+              text-align: center;
+
+              li {
+                cursor: pointer;
+                position: relative;
+                display: inline-block;
+                margin: 0 5px;
+                padding: 0;
+
+                button {
+                  font-size: 0;
+                  line-height: 0;
+                  display: block;
+                  padding: 5px;
+                  color: transparent;
+                  border: 0;
+                  outline: none;
+                  background: transparent;
+
+                  &:before {
+                    line-height: 20px;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 8px;
+                    height: 8px;
+                    border-radius: 50%;
+                    content: '';
+                    text-align: center;
+                    opacity: 0.25;
+                    transition: opacity 300ms;
+                    background-color: #373b42;
+                    -webkit-font-smoothing: antialiased;
+                    -moz-osx-font-smoothing: grayscale;
+                  }
+                }
+
+                &:hover,
+                &.slick-active {
+                  button {
+                    &:before {
+                      opacity: 1;
+                    }
+                  }
+                }
+              }
+            }
+
+            .slick-track {
+              margin: 0;
+              display: flex !important;
+            }
+
+            .slick-slide {
+              height: inherit !important;
+              & > div {
+                display: flex;
+                height: 100%;
+              }
+            }
+
+            &:hover {
+              .slick-arrow {
+                opacity: 1;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  main {
+    width: 129.6rem;
+    margin: 0 auto;
+
+    .claimed-price {
+      margin: 3.2rem 0;
+
+      .primary-caption {
+        margin-bottom: 0.8rem;
+      }
+    }
+
+    .list-container {
+      margin-top: 3.2rem;
+
+      .place {
+        width: 11.5%;
+      }
+
+      .racehorse {
+        width: 23.4%;
+      }
+
+      .race {
+        width: 21.9%;
+      }
+
+      .distance {
+        width: 9.1%;
+      }
+
+      .prize {
+        width: 12.8%;
+      }
+
+      .date {
+        width: 13.7%;
+      }
+
+      .collected {
+        width: 7.6%;
+        text-align: right;
+      }
+
+      .left,
+      .right {
+        display: flex;
+        div {
+          display: flex;
+          align-items: center;
+        }
+      }
+
+      .left {
+        width: 54.4%;
+
+        .racehorse {
+          width: 43%;
+        }
+        .race {
+          width: 40%;
+        }
+        .distance {
+          width: 17%;
+        }
+      }
+
+      .right {
+        width: 34.1%;
+
+        .prize {
+          width: 37.5%;
+        }
+        .date {
+          width: 40%;
+        }
+        .collected {
+          width: 22.5%;
+          margin: auto;
+        }
+      }
+
+      .list-label {
+        display: flex;
+        justify-content: space-between;
+        padding: 1.2rem 0 1.2rem 3.2rem;
+        border-bottom: solid 1px rgba(240, 248, 255, 0.12);
+      }
+
+      .list-content {
+        a {
+          &:hover,
+          &:focus,
+          &:active {
+            text-decoration: none;
+          }
+        }
+
+        .horse-row {
+          display: flex;
+          justify-content: space-between;
+          padding: 1.6rem 0 1.6rem 3.2rem;
+          border-bottom: solid 1px rgba(240, 248, 255, 0.042);
+          cursor: pointer;
+          position: relative;
+
+          .action-btns {
+            display: none;
+            .icon-replay {
+              opacity: 0.64;
+            }
+          }
+
+          &:hover {
+            background-color: rgba(240, 248, 255, 0.04);
+            .action-btns {
+              flex: 1;
+              display: flex;
+              justify-content: space-evenly;
+            }
+            .collected {
+              display: none;
+            }
+          }
+
+          .place {
+            display: flex;
+            align-items: center;
+
+            .racehorse__img {
+              width: 11rem;
+              .horse-container {
+                margin: 1rem !important;
+              }
+            }
+          }
+
+          .collected {
+            width: auto;
+            border-radius: 4px;
+            background: linear-gradient(135deg, #2a2e35 0%, #41464d 100%);
+            color: rgba(240, 248, 255, 0.64);
+            font-size: 1.2rem;
+            font-weight: bold;
+            letter-spacing: 0.6px;
+            line-height: 2.4rem;
+            padding: 0 1.2rem;
+            margin-right: auto;
+            margin-left: auto;
+          }
+
+          .reclaim-btn {
+            padding: 0 1.6rem;
+            border-radius: 4px;
+            letter-spacing: 0.6px;
+            line-height: 2.4rem;
+            margin-right: auto;
+            margin-left: auto;
+          }
+
+          .primary-text {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+          }
+
+          &__skeleton {
+            @include preloader-skeleton;
+
+            .place {
+              justify-content: flex-end;
+            }
+
+            .prize {
+              display: none;
+            }
+
+            .collected {
+              background: none;
+              margin-right: 0;
+            }
+
+            &:hover {
+              .collected {
+                display: inherit;
+              }
+            }
+
+            @include mobile-lg {
+              .prize {
+                display: block;
+              }
+            }
+
+            .skeleton__element {
+              &--place,
+              &--racehorse-name,
+              &--race,
+              &--distance,
+              &--prize,
+              &--date,
+              &--collected {
+                height: 1.2rem;
+              }
+
+              &--distance,
+              &--date,
+              &--collected {
+                width: 12.8rem;
+              }
+              &--place {
+                width: 2.4rem;
+                margin-right: 2.8rem;
+              }
+              &--racehorse-img {
+                width: 6.6rem;
+                margin-right: 1.5rem;
+              }
+              &--racehorse-name {
+                width: 25.2rem;
+              }
+              &--race {
+                display: none;
+              }
+              &--prize {
+                width: 8.6rem;
+                margin-left: 67%;
+              }
+              &--date {
+                margin-left: 45%;
+              }
+              &--distance {
+                margin-left: -2.5rem;
+              }
+
+              @include mobile-lg {
+                &--place,
+                &--collected {
+                  display: none;
+                }
+                &--racehorse-img {
+                  width: 7.6rem;
+                }
+                &--racehorse-name {
+                  width: 14.5rem;
+                }
+                &--race {
+                  width: 10rem;
+                  display: block;
+                }
+                &--distance {
+                  width: 8.8rem;
+                  margin-left: 0;
+                }
+                &--prize {
+                  width: 6.5rem;
+                  margin-left: 0;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &.mobile {
+    .top-section {
+      .top-content {
+        width: 100%;
+        padding: 0 1.6rem;
+        flex-direction: column;
+        margin-top: 2.4rem;
+        flex-flow: column-reverse;
+        align-items: inherit;
+        .winnings {
+          margin-top: 2rem;
+        }
+        .down {
+          flex-direction: column;
+          .unclaimed-price {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 0;
+            .overline-text {
+              color: #f0f8ff !important;
+            }
+            .claim-btn {
+              align-self: baseline;
+            }
+          }
+          .claim-list {
+            width: 100%;
+            padding: 0;
+            border-left: unset;
+            margin: 2.4rem auto 0;
+            .c-box {
+              padding: 0;
+              margin-bottom: 1.6rem;
+              .c-box-content {
+                flex-direction: row-reverse;
+                .race-info {
+                  padding: 3.8rem 1.6rem 1.2rem;
+                  position: relative;
+                  .horse-name {
+                    font-style: normal;
+                  }
+                  .place {
+                    position: absolute;
+                    top: 1.2rem;
+                    left: 1.6rem;
+                    .color-gold {
+                      color: #18191c !important;
+                      font-size: 16px;
+                      font-style: italic;
+                      font-weight: bold;
+                      letter-spacing: 0;
+                      line-height: 24px;
+                      border-radius: 4px;
+                      background-color: #fee912;
+                      padding: 0 8px 0 3px;
+                    }
+                    .price {
+                      span {
+                        color: rgba(240, 248, 255, 0.32);
+                        font-size: 1.6rem;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+
+            .show-more {
+              display: block;
+              margin: 1.2rem auto 0;
+            }
+          }
+        }
+      }
+    }
+
+    main {
+      width: 100%;
+
+      .claimed-price {
+        margin: 2.4rem 0 1.6rem;
+        .overline-text {
+          color: #f0f8ff !important;
+        }
+      }
+
+      .list-container {
+        margin-top: 1.6rem;
+        .list-label {
+          display: none;
+        }
+        .list-content {
+          .horse-row {
+            display: flex;
+            padding: 1.6rem 2rem;
+            position: relative;
+            overflow: hidden;
+
+            .place,
+            .racehorse,
+            .race,
+            .prize,
+            .date,
+            .collected {
+              width: fit-content;
+            }
+
+            .left {
+              width: 50%;
+              flex-direction: column;
+            }
+
+            .right {
+              flex-direction: column;
+              justify-content: space-between;
+              align-items: flex-end;
+            }
+
+            .place {
+              display: flex;
+              flex-direction: column;
+              align-items: flex-start;
+              width: 25%;
+              position: relative;
+              height: 7.3rem;
+
+              .racehorse__img {
+                position: absolute;
+                width: 11.4rem;
+                bottom: -0.6rem;
+                left: -1.8rem;
+              }
+            }
+
+            .prize {
+              color: rgb(238, 247, 253) !important;
+              font-family: Montserrat;
+              font-weight: 700;
+              font-size: 2.4rem;
+              font-weight: bold;
+              letter-spacing: 0.0583333px;
+              line-height: 2.4rem;
+            }
+
+            .collected {
+              margin: 0;
+            }
+
+            .date {
+              display: none;
+            }
+
+            .primary-text {
+              &.distance {
+                width: 100%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

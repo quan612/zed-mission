@@ -1,0 +1,166 @@
+// screen sizes
+
+@mixin desktop-5k {
+  // imac pro's
+  @media (min-width: 5120px) {
+    @content;
+  }
+}
+
+@mixin desktop-4k {
+  @media (min-width: 3840px) {
+    @content;
+  }
+}
+
+@mixin desktop-uhd {
+  @media (min-width: 2160px) {
+    @content;
+  }
+}
+
+@mixin desktop-hd {
+  @media (max-width: 1920px) {
+    @content;
+  }
+}
+
+@mixin laptop-xl {
+  @media (max-width: 1440px) {
+    @content;
+  }
+}
+
+@mixin laptop-lg {
+  @media (max-width: 1280px) {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @media (max-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin laptop-sm {
+  @media (max-width: 890px) {
+    @content;
+  }
+}
+
+@mixin tablet-landscape {
+  @media (max-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin tablet-sm {
+  // in case we need support for devices such as surface go
+  @media (max-width: 540px) {
+    @content;
+  }
+}
+
+@mixin mobile-lg {
+  @media (max-width: 425px) {
+    @content;
+  }
+}
+
+@mixin mobile-md {
+  @media (max-width: 376px) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: 360px) {
+    @content;
+  }
+}
+
+@mixin mobile-sm {
+  // in case we need support for devices such as galaxy fold - it's VERY narrow when closed.
+  @media (max-width: 280px) {
+    @content;
+  }
+}
+
+// Media queries that align with useMediaQuery
+@mixin mq-desktop {
+  @media (min-width: 1008px) {
+    @content;
+  }
+}
+
+@mixin mq-tablet {
+  @media (max-width: 1007px) {
+    @content;
+  }
+}
+
+@mixin mq-mobile {
+  @media (max-width: 639px) {
+    @content;
+  }
+}
+
+// utilities
+@mixin remove-scrollbar {
+  /* Hide scrollbar for IE, Edge and Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@mixin preloader-skeleton {
+  h3,
+  p {
+    border-radius: 2px;
+    background-color: rgba(240, 248, 255, 0.12);
+    position: relative;
+    overflow: hidden;
+
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 50%;
+      height: 100%;
+      animation: sweep 2s infinite;
+      background-image: linear-gradient(
+        to left,
+        transparent,
+        rgba(240, 248, 255, 0.05),
+        transparent
+      );
+    }
+  }
+}
+
+@mixin tournament-panel {
+  &.tournament {
+    background: url('../../../../assets/images/tournament-bg.jpg') center left/auto 125% no-repeat,
+      linear-gradient(0deg, #2b2942, #2b2942);
+    &:hover {
+      background: linear-gradient(0deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.04)),
+        url('../../../../assets/images/tournament-bg.jpg') center left/auto 125% no-repeat,
+        linear-gradient(0deg, #2b2942, #2b2942);
+    }
+    .tournament-icon {
+      margin-right: 1rem;
+    }
+  }
+}

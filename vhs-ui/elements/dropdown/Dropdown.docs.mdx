@@ -1,0 +1,88 @@
+---
+description: A Dropdown component.
+---
+
+import { Box, ChakraProvider, extendTheme, Select } from '@chakra-ui/react'
+import { Dropdown, DropdownStyleConfig, Option } from '.'
+import { BasicDropdown } from './Dropdown.composition'
+import NamePlate from './nameplate.svg'
+
+### Design
+
+<iframe
+  title="button-test.docs.mdx"
+  style={{ border: '1px solid rgba(0, 0, 0, 0.1)' }}
+  width="800"
+  height="450"
+  src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com/file/AJsUrv5zfTrRgB0XgHeHRa/Components---UI?node-id=480%3A8543"
+  allowfullscreen
+></iframe>
+
+### Component usage
+
+```js
+
+import { Dropdown, Option } from '@/vhs-ui/elements/Dropdown'
+
+const options = [
+  { label: 'Pick 1', value: 'pick1', image: NamePlate },
+  { label: 'Pick 2', value: 'pick2', image: NamePlate },
+  { label: 'Pick 3', value: 'pick3', image: NamePlate },
+]
+
+export const DropdownExample = () => {
+  const [selected, setSelected] = useState<Option>()
+
+  return (
+      <Dropdown size="md" onSelection={setSelected} selected={selected}>
+        {options}
+      </Dropdown>
+  )
+}
+```
+
+### Let's get down to business
+
+```js live
+<ChakraProvider
+  theme={extendTheme({
+    colors: {
+      gray: {
+        400: '#3b3f46',
+        500: '#636464',
+        700: '#858F98',
+        900: '#292829',
+      },
+      white: {
+        default: '#fff',
+        500: '#f0f8ffa3',
+        700: '#F0F8FF',
+      },
+    },
+    styles: {
+      global: {
+        body: {
+          fontFamily: '',
+          color: '',
+          bg: '',
+          lineHeight: '',
+        },
+      },
+    },
+  })}
+>
+  <Box w={400} h={448} bg="#1F1F1F" display="flex" justifyContent="center" gap={3} p={8}>
+    <Dropdown
+      onSelection={() => {
+        return
+      }}
+    >
+      {[
+        { label: 'Pick 1', value: 'pick1', image: NamePlate },
+        { label: 'Pick 2', value: 'pick2', image: NamePlate },
+        { label: 'Pick 3', value: 'pick3', image: NamePlate },
+      ]}
+    </Dropdown>
+  </Box>
+</ChakraProvider>
+```

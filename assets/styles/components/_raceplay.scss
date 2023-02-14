@@ -1,0 +1,469 @@
+.race-play-container {
+  border: unset;
+  background: linear-gradient(180deg, #242d32 0%, #1e2128 50%);
+  position: relative;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12);
+  padding: 0;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: -1px;
+    height: 2px;
+    width: 100%;
+    background: linear-gradient(135deg, #429c87 0%, #3b6e72 100%);
+  }
+
+  .race-play-content {
+    height: auto;
+    position: relative;
+    margin: 0 auto;
+
+    .race-horse-list,
+    .result-content {
+      padding: 2.8rem 4rem;
+      @include mobile-lg {
+        & {
+          padding: 2rem;
+        }
+      }
+    }
+    // UpcomingContent
+    .race-horse-list {
+      padding-top: 5.3rem;
+
+      .gate {
+        width: 5%;
+      }
+
+      .racehorse {
+        width: 40%;
+        @include tablet {
+          width: unset;
+        }
+        .racing-tag {
+          margin-left: 0.8rem;
+        }
+      }
+      .details {
+        width: 20%;
+      }
+      .career {
+        width: 5%;
+      }
+
+      .stable {
+        text-align: right;
+        width: 30%;
+      }
+
+      .list-header {
+        display: flex;
+        padding: 1.2rem 3rem;
+
+        .racehorse {
+          padding-left: 8.7rem;
+        }
+      }
+
+      .list-content {
+        .racehorse-row {
+          position: relative;
+          display: flex;
+          align-items: center;
+          padding: 2.4rem 3rem;
+          border-bottom: 1px solid rgba(240, 248, 255, 0.04);
+          cursor: pointer;
+          height: 10rem;
+          .horse-container {
+            width: 10rem !important;
+            margin-right: 5rem;
+            margin-left: 0;
+          }
+          &:hover {
+            background-color: rgba(240, 248, 255, 0.04);
+          }
+
+          .racehorse {
+            display: flex;
+            align-items: center;
+            .horse-img {
+              width: 10rem;
+              margin-left: -2rem;
+            }
+
+            .racing-tag {
+              margin-left: 0.6rem;
+            }
+          }
+
+          .details {
+            display: flex;
+            width: 20%;
+
+            .helpful {
+              margin-right: 1.8rem;
+              position: relative;
+
+              &.dot:before {
+                content: '•';
+                position: absolute;
+                left: -1.8rem;
+                top: 0;
+                bottom: 0;
+                width: 1.8rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+              }
+            }
+          }
+
+          .career {
+            width: 5%;
+          }
+
+          .stable {
+            width: 30%;
+          }
+
+          @include mobile-lg {
+            & {
+              justify-content: space-evenly;
+            }
+            .horse-container {
+              margin-left: -2rem;
+              margin-right: 0;
+            }
+            .racehorse {
+              padding-left: 0;
+            }
+            .gate {
+              position: absolute;
+              top: 0.5rem;
+              left: 0.5rem;
+            }
+          }
+        }
+      }
+    }
+
+    // ResultContent
+    .replay-button {
+      top: 7.8rem;
+      right: 3.2rem;
+      padding: 10px;
+      transition: all 0.5s;
+      border-radius: 5px;
+      border: 1px solid white;
+      color: white;
+      font-style: italic;
+      font-size: 2rem;
+      background-color: transparent;
+      position: absolute;
+      z-index: 15;
+      font-family: Montserrat;
+      font-weight: 700;
+
+      img {
+        width: 2rem;
+        height: 2rem;
+        padding-bottom: 2px;
+        padding-right: 4px;
+      }
+    }
+
+    .replay-button:hover {
+      background-color: rgba(255, 255, 255, 0.25);
+    }
+
+    .replay-button.active {
+      border-color: #647c7d;
+      background: linear-gradient(to right, #27b18a, #395052);
+    }
+  }
+
+  &.live {
+    .race-result-container {
+      padding: 2.4rem 4rem;
+    }
+  }
+
+  // UpcomingContent Mobile
+  &.mobile {
+    .close-panel {
+      top: -2rem;
+      right: -0.4rem;
+      z-index: 1;
+    }
+
+    .race-play-content {
+      padding: 0;
+    }
+
+    .in-race-info {
+      display: block;
+      padding: 2rem 2rem 4rem 2rem;
+
+      .race-description {
+        width: 100% !important;
+
+        .race-details {
+          justify-content: space-between;
+
+          & > div {
+            width: auto;
+
+            p > * {
+              display: block;
+            }
+          }
+        }
+      }
+
+      .race-status {
+        width: 100% !important;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-end;
+
+        .race-prize-pool-container {
+          margin-bottom: 0;
+
+          .prize-pool {
+            text-align: left;
+            span {
+              display: flex;
+              flex-direction: row-reverse;
+              align-items: center;
+              margin-left: 0;
+              line-height: 4rem;
+              .icn-info__container {
+                margin: 0 1rem;
+                .icon-info {
+                  width: 2.4rem;
+                }
+              }
+            }
+          }
+        }
+
+        .race-info-status-container {
+          display: block;
+          text-align: right;
+          margin-bottom: 10px;
+
+          h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.8rem;
+          }
+
+          .race-info-status {
+            border: none;
+            padding: 0;
+            margin: 0;
+
+            &.active {
+              background: unset;
+            }
+          }
+        }
+      }
+    }
+
+    .race-horse-list {
+      padding-top: 1rem;
+
+      .list-header {
+        display: none;
+      }
+
+      .list-content {
+        .racehorse-row {
+          padding: 1.6rem;
+          .gate {
+            align-self: baseline;
+            width: unset;
+          }
+
+          .horse-img {
+            width: 9rem !important;
+            margin-left: -2rem !important;
+          }
+
+          .racehorse-info {
+            flex: 1;
+
+            @include tablet {
+              max-width: 70%;
+            }
+            @include mobile-lg {
+              max-width: unset;
+            }
+
+            .details {
+              width: 100%;
+
+              .left {
+                display: flex;
+                max-width: 80%;
+              }
+
+              .racing-tag {
+                margin-left: 0.8rem;
+              }
+            }
+          }
+
+          .horse-info {
+            display: flex;
+
+            .stable {
+              width: auto;
+            }
+
+            .career {
+              width: auto;
+              margin-left: 1.8rem;
+              position: relative;
+
+              &.dot:before {
+                content: '•';
+                position: absolute;
+                left: -1.8rem;
+                top: 0;
+                bottom: 0;
+                width: 1.8rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .race-result-container {
+      .race-result {
+        max-height: unset;
+
+        .race-horse-card-lg {
+          width: 100%;
+        }
+      }
+    }
+
+    .race-content {
+      margin: 0;
+      padding: 3.2rem 4rem;
+
+      .race-container {
+        position: static;
+
+        .race-additional-info {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-top: 3.2rem;
+
+          .time-elapsed {
+            margin: 0;
+
+            .label {
+              font-style: italic;
+              font-family: Montserrat;
+              font-weight: 700;
+              letter-spacing: 0.5px;
+              font-size: 1.4rem;
+              margin-right: 1.2rem;
+            }
+
+            .capitalize {
+              color: white;
+              font-size: 1.4rem;
+            }
+          }
+
+          .positions {
+            display: flex;
+            box-sizing: border-box;
+            border: 2px solid rgba(240, 248, 255, 0.64);
+            border-radius: 8px;
+            padding: 1rem 1.8rem;
+            color: #f0f8ff;
+            font-family: Montserrat;
+            font-weight: 700;
+            font-size: 18px;
+            letter-spacing: 0.07px;
+            line-height: 24px;
+
+            .icon {
+              margin-right: 1.4rem;
+              opacity: 0.64;
+            }
+          }
+        }
+
+        .mobile-race-stats {
+          box-sizing: border-box;
+          border: 2px solid #32363c;
+          border-radius: 12px 12px 0 0;
+          background-color: #262930;
+          box-shadow: 0 -8px 12px 0 rgba(0, 0, 0, 0.12);
+          padding: 1.6rem 2rem;
+          position: fixed;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 50vh;
+          z-index: 99;
+          overflow: auto;
+
+          .race-stats {
+            margin-top: 1.8rem;
+
+            .race-horse-card-container {
+              width: 100%;
+              height: 40px;
+              margin: 5px 0;
+              align-items: center;
+
+              .horse-position-container {
+                width: auto;
+                .horse-position {
+                  width: 55px;
+                  padding: 0.7rem;
+
+                  .horse-number {
+                    font-size: 1.6rem;
+                  }
+                }
+              }
+
+              .race-horse-card {
+                flex: 1;
+                .horse-container {
+                  .hot-horse {
+                    position: absolute;
+                  }
+                }
+                .race-horse-card-image {
+                  width: 45px;
+                  height: 4rem;
+                }
+
+                .race-horse-card-info {
+                  .race-horse-card-name {
+                    font-size: 1.4rem;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+

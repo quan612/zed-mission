@@ -1,0 +1,10 @@
+#transakFiatOnOffRamp {
+  #transak_modal-overlay,
+  #transak_modal {
+    z-index: 10025;
+    #transakOnOffRampWidget {
+      min-height: 100%;
+      min-width: 100%;
+    }
+  }
+}

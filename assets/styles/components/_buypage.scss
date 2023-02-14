@@ -1,0 +1,781 @@
+@import '../mixins';
+
+.page-content.buy {
+  main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    color: white;
+
+    .top-section {
+      width: 58%;
+      position: relative;
+      text-align: center;
+      margin: 0 auto -9%;
+      z-index: 99;
+
+      .section-content {
+        display: flex;
+        position: relative;
+        margin-top: -7rem;
+
+        &:before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 25%;
+          width: 40%;
+          padding-top: 40%;
+          background: url('../images/light-spot.png') no-repeat center;
+          background-size: 100% 100%;
+          opacity: 0.6;
+        }
+
+        &:after {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background: url('../images/img-cloud1.png') no-repeat right;
+          background-size: 100% 100%;
+          opacity: 0.8;
+          max-width: 120rem;
+          margin: 0 auto;
+        }
+      }
+      .section-footer {
+        padding: 1.2rem 0;
+      }
+
+      .bloodline {
+        opacity: 0.02;
+        color: #ffffff;
+        font-family: Montserrat;
+        font-weight: 700;
+        font-size: 15rem;
+        letter-spacing: 7.2px;
+        line-height: 17.5rem;
+        text-align: center;
+      }
+
+      .horse-introduction {
+        width: 37%;
+        text-align: left;
+        z-index: 1;
+
+        &.nakamoto:before {
+          content: 'nakamoto';
+          text-transform: uppercase;
+        }
+
+        &.szabo:before {
+          content: 'szabo';
+          text-transform: uppercase;
+        }
+
+        &.finney:before {
+          content: 'finney';
+          text-transform: uppercase;
+        }
+
+        &.buterin:before {
+          content: 'buterin';
+          text-transform: uppercase;
+        }
+
+        .title {
+          position: relative;
+          padding: 3rem 0 3.2rem;
+
+          .now-selling {
+            display: inline-block;
+            background-image: linear-gradient(135deg, #a8fff3 0%, #13a82a 100%);
+            color: transparent;
+            -webkit-background-clip: text;
+            font-size: 1.8rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            line-height: 2.4rem;
+            margin-bottom: 1.2rem;
+          }
+
+          .lg-text {
+            display: flex;
+            .icon-part {
+              margin-left: 1.2rem;
+            }
+          }
+        }
+      }
+
+      .horse-img-part {
+        position: relative;
+        align-self: flex-end;
+        max-width: 60rem;
+
+        &:after {
+          content: '';
+          position: absolute;
+          bottom: 4%;
+          right: 11%;
+          width: 58%;
+          height: 3rem;
+          background: url('../images/img-shadow.svg') no-repeat center;
+          background-size: 100%;
+        }
+
+        .horse-img {
+          width: 100%;
+          position: relative;
+          z-index: 99;
+        }
+
+        .skip {
+          position: absolute;
+          top: 4rem;
+          left: 0;
+          right: 0;
+
+          .icn-txt {
+            width: 6.5rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            opacity: 0.64;
+            margin: 0 auto;
+
+            .icon {
+              margin-right: 0.5rem;
+            }
+
+            &:hover {
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
+
+    .main-section {
+      position: relative;
+      background: linear-gradient(transparent, #22262d 30%),
+        url('../images/bkg-oval-top-bottom.svg') no-repeat top;
+      background-size: 100%;
+      padding-top: 10%;
+
+      .buy-horse {
+        width: 58%;
+        margin: 0 auto;
+
+        .buy-horse-part {
+          position: relative;
+          text-align: center;
+
+          &:before {
+            position: absolute;
+            top: -1px;
+            bottom: -1px;
+            right: -1px;
+            left: -1px;
+            background: linear-gradient(135deg, #a8fff3 0%, #13a82a 100%);
+            border-radius: 12px;
+          }
+
+          .buy-horse-content {
+            position: relative;
+            border-radius: 12px;
+            background: linear-gradient(90deg, #22262d 0%, #1d2026 100%);
+            border: 2px solid #3d645c;
+            box-shadow: 0 32px 24px 0 rgba(0, 0, 0, 0.2);
+            padding: 6rem 5.2rem 3.2rem;
+            z-index: 9;
+
+            .time-left {
+              font-size: 1.4rem;
+              position: absolute;
+              right: 6rem;
+              top: 2.2rem;
+            }
+
+            .horse-properties {
+              display: flex;
+              justify-content: space-between;
+              max-width: 108rem;
+              margin: 0 auto;
+
+              .property {
+                display: flex;
+                text-align: left;
+
+                .property-img {
+                  margin-right: 1.5rem;
+                  opacity: 0.32;
+
+                  &.gen {
+                    opacity: 1;
+                  }
+                }
+
+                .property-text .primary-text {
+                  display: flex;
+                  align-items: center;
+
+                  .icn-info {
+                    height: auto;
+                    margin-left: 0.5rem;
+                    opacity: 0.64;
+                    cursor: pointer;
+
+                    &:hover {
+                      opacity: 1;
+                    }
+                  }
+                }
+              }
+            }
+
+            .handle-btns {
+              width: 60%;
+              border-radius: 1.2rem;
+              background-color: rgba(240, 248, 255, 0.04);
+              padding: 2.4rem;
+              margin: 3.2rem auto 0;
+
+              .price-text {
+                margin-bottom: 2.4rem;
+              }
+
+              .price-btn {
+                margin-right: 3.2rem;
+                border: 1px solid rgba(240, 248, 255, 0.12);
+                background: unset;
+                border-radius: 4px;
+                box-shadow: unset;
+
+                .symbol {
+                  margin-left: 0.5rem;
+                }
+              }
+
+              .price-btn,
+              .buy-btn {
+                white-space: nowrap;
+                width: 45%;
+                max-width: 24rem;
+              }
+            }
+          }
+        }
+      }
+
+      .app-footer {
+        background: unset;
+        padding-top: 0;
+      }
+    }
+  }
+
+  &.mobile {
+    overflow: hidden;
+
+    main {
+      overflow: hidden;
+
+      .top-section {
+        width: 100%;
+        position: relative;
+        margin-bottom: 0;
+
+        .horse-introduction {
+          width: 100%;
+          padding: 0 20px;
+          margin-top: 40px;
+          text-align: center;
+
+          .title {
+            content: '';
+            position: absolute;
+            top: 2.5rem;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            display: flex;
+            justify-content: center;
+            font-size: 45px;
+            font-family: Montserrat;
+            font-weight: 700;
+            letter-spacing: 2.5px;
+            line-height: 50px;
+            align-items: flex-start;
+            color: rgb(240, 248, 255);
+            opacity: 0.04;
+            padding: 0;
+          }
+
+          .horse-name {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 28px;
+            font-family: Montserrat;
+            font-weight: 600;
+            position: relative;
+            z-index: 99;
+            .icon-part {
+              margin-left: 1.2rem;
+            }
+          }
+        }
+      }
+
+      .main-section {
+        background: unset;
+        background-size: unset;
+        padding-top: 3rem;
+
+        .buy-horse {
+          width: auto;
+          margin: 1px;
+
+          .buy-horse-part {
+            margin-bottom: 1rem;
+
+            .buy-horse-content {
+              padding: 1.6rem 2rem 3.2rem;
+              border: unset;
+              display: flex;
+              justify-content: space-between;
+              align-items: flex-end;
+              background: unset;
+              position: relative;
+
+              .time-left {
+                right: 2rem;
+                top: 0;
+              }
+
+              .horse-img {
+                height: 90%;
+                position: absolute;
+                top: -1rem;
+                left: 7rem;
+                z-index: -1;
+              }
+
+              .horse-properties {
+                width: 55%;
+                display: block;
+                margin: 0;
+
+                .property {
+                  width: 100%;
+                  padding: 16px 0;
+
+                  .property-text {
+                    .grey-text {
+                      margin-bottom: 8px;
+                    }
+                  }
+                }
+              }
+
+              .handle-buy-btn {
+                align-self: stretch;
+                width: 42%;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                padding: 0;
+                margin: 0;
+                border-radius: unset;
+                background-color: unset;
+
+                button {
+                  width: 100%;
+                }
+
+                .price-btn {
+                  border: 1px solid rgba(240, 248, 255, 0.12);
+                  border-radius: 4px;
+                  background-color: unset;
+                  padding: 1.6rem;
+                  margin-bottom: 1.2rem;
+                }
+
+                .price-text {
+                  margin-bottom: 1.2rem;
+                }
+
+                .buy-btn {
+                  border-radius: 0.8rem;
+                  padding: 1.4rem 1rem;
+                  &.login {
+                    font-size: 1.4rem;
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        .horse-text {
+          padding: 2rem;
+        }
+      }
+    }
+  }
+}
+
+.price-breakdown {
+  display: flex;
+  margin-bottom: 2rem;
+  justify-content: space-between;
+  img {
+    opacity: 0.32;
+    margin-left: 1rem;
+  }
+  .value {
+    span {
+      margin-right: 1rem;
+    }
+    font-family: Montserrat;
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: rgba(240, 248, 255, 0.32);
+  }
+  @media screen and (max-width: 576px) {
+    .overline-text {
+      font-size: 1.2rem;
+    }
+    img {
+      opacity: 0.64;
+      margin-left: 0.5rem;
+    }
+  }
+}
+
+.buy-confirm-modal {
+  padding: 4rem;
+  width: 70rem;
+  max-width: none;
+  max-height: none;
+  border-radius: 1rem;
+  .buy-modal-content {
+    text-align: center;
+
+    .buy-confirm-form {
+      width: 100%;
+      h3 {
+        margin-bottom: 2rem;
+      }
+      .additional-info-desktop {
+        img {
+          margin-right: 1rem;
+        }
+        cursor: pointer;
+        color: rgba(240, 248, 255, 0.64);
+        font-size: 1.4rem;
+        padding: 1rem 0;
+      }
+      .additional-info-content {
+        padding: 1rem 0;
+        font-size: 1.4rem;
+        color: rgba(240, 248, 255, 0.64);
+        height: 0;
+        opacity: 0;
+        visibility: hidden;
+        transition: height 0.5s, margin 0.5s, opacity 0.1s ease-in;
+        &.open {
+          margin-bottom: 3rem;
+          height: 14rem;
+          visibility: unset;
+          opacity: 1;
+        }
+      }
+      .horse-part {
+        display: flex;
+        border: 2px solid rgba(240, 248, 255, 0.04);
+        border-radius: 1.2rem;
+        background-color: rgba(240, 248, 255, 0.04);
+        padding: 2.4rem 1rem;
+        margin: 3.2rem 0 2.4rem;
+      }
+
+      .horse-info {
+        text-align: left;
+      }
+
+      .close-icon {
+        position: absolute;
+        top: 2rem;
+        right: 2rem;
+        font-size: 2.2rem;
+        color: #89898a;
+        cursor: pointer;
+      }
+
+      .horse-part {
+        display: flex;
+        border: 2px solid rgba(240, 248, 255, 0.04);
+        border-radius: 1.2rem;
+        background-color: rgba(240, 248, 255, 0.04);
+        padding: 2.4rem 1rem;
+        margin: 3.2rem 0 2.4rem;
+
+        .horse-img {
+          width: 9rem;
+          align-self: center;
+          margin-right: 1rem;
+        }
+
+        .genotype {
+          text-align: left;
+          margin-top: 0.8rem;
+
+          span:not(:last-of-type) {
+            position: relative;
+            margin-right: 1.6rem;
+
+            &:before {
+              content: '•';
+              position: absolute;
+              right: -1.6rem;
+              top: 0;
+              bottom: 0;
+              width: 1.6rem;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+            }
+          }
+        }
+      }
+
+      .note-part {
+        display: flex;
+        align-items: flex-start;
+        border: 2px solid rgba(240, 248, 255, 0.64);
+        border-radius: 1.2rem;
+        background-color: #2a2e35;
+        padding: 1.6rem;
+        margin-bottom: 3.2rem;
+        text-align: left;
+
+        img {
+          margin-right: 1.6rem;
+          flex-shrink: 0;
+        }
+      }
+
+      .handle-btns {
+        border-top: 1px solid rgba(240, 248, 255, 0.12);
+        padding-top: 4rem;
+        margin-top: 3.2rem;
+      }
+
+      .confirm-btn {
+        width: 80%;
+        max-width: 24rem;
+      }
+
+      section.loading {
+        .md-text {
+          margin-bottom: 2.4rem;
+        }
+
+        .tip {
+          font-size: 1.2rem;
+          color: rgba(240, 248, 255, 0.64);
+        }
+
+        .loader-content {
+          position: relative;
+          padding: 10rem 0;
+        }
+      }
+    }
+  }
+
+  @include mobile-lg {
+    width: 90%;
+    max-height: 55rem;
+    overflow: hidden scroll;
+    max-width: unset;
+    padding: 4rem 2rem;
+    margin-top: calc(var(--announcekit-bar-font-multiplier, 1) * 2.5rem);
+
+    .buy-modal-content {
+      .buy-confirm-form {
+        .price-field {
+          text-align: left;
+          .price-input {
+            width: auto;
+            .sm-input {
+              max-width: 10rem;
+            }
+          }
+        }
+        .additional-info {
+          display: flex;
+          justify-content: center;
+          margin-bottom: 1.6rem;
+          img {
+            opacity: 0.64;
+            margin-left: 0.6rem;
+          }
+        }
+        .confirm-btn {
+          width: auto;
+          padding: 1.4rem 2.6rem;
+          text-transform: capitalize !important;
+        }
+      }
+    }
+  }
+
+  .buy-method-choice {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    .method-options {
+      display: flex;
+      flex-direction: column;
+      margin-left: 2rem;
+      position: relative;
+      flex: 1;
+      justify-content: center;
+      .payment-title {
+        font-family: Montserrat;
+        font-weight: 600;
+        position: absolute;
+        width: 100%;
+        top: 0;
+        color: white;
+      }
+      .eth-price {
+        color: rgba(240, 248, 255, 0.32);
+        font-size: 1.2rem;
+        letter-spacing: 1px;
+        margin: 1rem 0;
+      }
+      .fiat-price {
+        border: solid 1px rgba(240, 248, 255, 0.16);
+        color: rgba(240, 248, 255, 0.32);
+        border-radius: 5px;
+        text-align: center;
+        padding: 2rem 0;
+        width: 100%;
+        letter-spacing: 1px;
+        margin: 1rem auto;
+        font-size: 1.2rem;
+        font-family: Montserrat;
+        font-weight: 600;
+        span {
+          font-size: 1.6rem;
+          color: white;
+          margin-right: 0.5rem;
+        }
+      }
+      .have-a-zed-coupon {
+        padding: 1rem 0;
+        .m-input-content {
+          .sm-input {
+            width: 100%;
+            padding: 0.8rem 2.6rem 0.8rem 1.5rem;
+            &:read-only {
+              color: #f0f8ff;
+            }
+          }
+          .input-group {
+            .input-group-suffix {
+              position: absolute;
+              right: 1rem;
+              top: 1.1rem;
+            }
+            ::placeholder {
+              font-size: 1.4rem;
+            }
+          }
+        }
+        button {
+          width: 100%;
+          margin: 1rem 0;
+          border: none;
+          border-radius: 0.6rem;
+          font-size: 1.4rem;
+        }
+      }
+      button {
+        width: 100%;
+        padding: 1.2rem 0;
+        margin: 1rem 0;
+        border: none;
+        border-radius: 0.6rem;
+        font-size: 1.4rem;
+      }
+      .eth-balance {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        .top-up {
+          color: #27b18a;
+          cursor: pointer;
+          font-size: 1.2rem;
+          letter-spacing: 1px;
+          font-family: Montserrat;
+          font-weight: 600;
+        }
+        .own-balance {
+          letter-spacing: 1px;
+          font-size: 1.2rem;
+          font-family: Montserrat;
+          font-weight: 500;
+          color: rgba(240, 248, 255, 0.32);
+        }
+      }
+    }
+    @media screen and (max-width: 576px) {
+      & {
+        flex-direction: column;
+        .method-options {
+          width: 100%;
+          margin: 0 auto;
+          .payment-title {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+.additional-info-modal {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  padding: 0;
+
+  .additional-info-content {
+    display: flex;
+    align-items: flex-start;
+    border: 2px solid #f0f8ff;
+    border-top-left-radius: 1.2rem;
+    border-top-right-radius: 1.2rem;
+    background-color: #2a2e35;
+    padding: 1.6rem;
+    text-align: left;
+
+    img {
+      margin-right: 1.6rem;
+      flex-shrink: 0;
+    }
+
+    .overline-text {
+      margin-bottom: 1.2rem;
+    }
+  }
+}

@@ -1,0 +1,18 @@
+.select-horse-btn {
+  position: absolute;
+  right: 0;
+  @include tablet-sm {
+    margin-top: 30px;
+  }
+}
+
+.icn-plus {
+  height: 14px;
+  width: 14px !important;
+  margin-bottom: 3px;
+  margin-right: 5px;
+}
+
+.cursor-default {
+  cursor: default !important;
+}

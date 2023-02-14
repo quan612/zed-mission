@@ -1,0 +1,196 @@
+.page-content.roster {
+  main {
+    display: block;
+    color: white;
+
+    .top-section {
+      width: 129.6rem;
+      text-align: center;
+      margin: 5rem auto;
+
+      .overline-text {
+        position: relative;
+        padding: 7rem 0;
+
+      }
+      .lg-text {
+        margin-bottom: 2.5rem;
+      }
+      .primary-text {
+        padding: 0 18rem;
+        margin: 0 auto 2.5rem;
+      }
+    }
+
+    .main-section {
+      position: relative;
+
+      .accordion-label,
+      .panel__label {
+        .grey-text {
+          font-size: 1.2rem;
+        }
+        .normal-text {
+          font-size: 1.4rem;
+        }
+        .md-text {
+          font-size: 2.2rem;
+        }
+      }
+
+      .glow-bg {
+        width: 100%;
+      }
+
+      .roster {
+        background: #1d2026;
+        margin-top: -3px;
+        position: relative;
+
+        .roster-content {
+          flex: 1;
+          margin: auto 0;
+
+          .row:after {
+            content: '';
+            display: table;
+            clear: both;
+          }
+
+          .column_one_main {
+            margin-top: -12%;
+            float: left;
+            width: 17%;
+            padding: 10px;
+          }
+
+          .column_two_main {
+            float: left;
+            width: 83%;
+            padding: 2rem 0;
+
+            .filter {
+              margin-top: 1.2rem;
+              width: 79%;
+            }
+
+            .column_one_stall_name {
+              text-align: left;
+              width: 35%;
+              padding-left: 15px;
+            }
+
+            .column_two_row_view {
+              width: 65%;
+              text-align: right;
+
+              .icons {
+                margin-left: 1.5rem;
+                display: inline;
+
+                .icon-part {
+                  margin-right: 0.2rem;
+                  opacity: 0.64;
+                  cursor: pointer;
+
+                  &:last-of-type {
+                    margin: 0;
+                  }
+
+                  &:hover {
+                    opacity: 1;
+                  }
+
+                  .icon {
+                    margin-right: 1.2rem;
+                  }
+                }
+              }
+            }
+          }
+
+          .accordion-content {
+            width: 79%;
+          }
+
+          .accordion-label {
+            width: 79%;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 1.6rem;
+            padding-right: 1.5rem;
+
+            .right {
+              width: 60%;
+              display: flex;
+              align-items: center;
+              justify-content: flex-end;
+
+              .stable {
+                width: 50%;
+              }
+              .key {
+                width: 30%;
+              }
+              .date {
+                width: 20%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &.mobile {
+    overflow: hidden;
+    main {
+      .top-section {
+        width: 100%;
+        margin-top: 1rem;
+
+        .overline-text {
+          padding: 3rem 0;
+
+          &:before {
+            font-size: 4rem;
+            letter-spacing: 0;
+          }
+        }
+
+        .description {
+          padding: 0 2rem;
+          text-align: left;
+          margin-top: 3.2rem;
+        }
+
+        .md-text {
+          margin-bottom: 3.2rem;
+        }
+
+        .primary-btn {
+          margin-bottom: 6rem;
+        }
+      }
+
+      .main-section {
+        .roster {
+          margin-top: -2rem;
+          .roster-content {
+            width: 100%;
+            padding: 0 2rem;
+
+            .accordion-label {
+              padding: 0;
+              margin-bottom: 8px;
+            }
+
+            .accordion-content {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
